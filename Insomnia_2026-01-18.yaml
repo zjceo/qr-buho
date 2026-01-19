@@ -1,0 +1,944 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Documentación QRAPI
+meta:
+  id: wrk_8caab6b32b7842b8a16964328f37110b
+  created: 1759276189473
+  modified: 1759276189473
+  description: ""
+collection:
+  - name: Documentación QRAPI
+    meta:
+      id: fld_236ec6e649b04178a5589e9bf890c751
+      created: 1759276189477
+      modified: 1759276189477
+      sortKey: -1759276187897
+      description: ""
+    children:
+      - name: Auth
+        meta:
+          id: fld_191f9f3285c54d508e758021a1c680a8
+          created: 1759276189478
+          modified: 1759276189478
+          sortKey: -1759276187896
+          description: ""
+        children:
+          - name: Reseller
+            meta:
+              id: fld_f5fc885c96a64be8a777223f6855db05
+              created: 1759276189480
+              modified: 1759276189480
+              sortKey: -1759276187895
+              description: ""
+            children:
+              - url: http://{{dominio}}/auth/login
+                name: Login
+                meta:
+                  id: req_2cf8d191f6b1459286eb71dd2a2a56e8
+                  created: 1759276189482
+                  modified: 1759276189482
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1759276187894
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \  \"email\": \"admin@qr.buho.la\",\r
+
+                    \  \"password\": \"bh0yJj2C\"\r
+
+                    }"
+                headers:
+                  - name: Accept
+                    value: application/json
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://{{dominio}}/api/auth/verify_token
+                name: Verify token
+                meta:
+                  id: req_695c9c71035d4ca7b6c19a5580f4fd70
+                  created: 1759276189484
+                  modified: 1759276189484
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1759276187893
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "/* El api_token se obtiene de la respuesta del login y se usa tanto en
+                    authorization como en este body*/\r
+
+                    {\r
+
+                    \  \"api_token\":
+                    \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRp\
+                    IjoiNWIzYzgwOTAwOGFmMjM1MzYyODU0ZDZiMDYwMTk3YjZhZjk5YjA2ZTU\
+                    5ZDg4YjZjMzQ3ZjczOGExZjQ5MzkzNTllOGZjYjkwOGUwNDAwNDMiLCJpYX\
+                    QiOjE3NTg5Mjk2MzYuNjc5NzkyLCJuYmYiOjE3NTg5Mjk2MzYuNjc5ODAyL\
+                    CJleHAiOjE3NzQ1NjgwMzYuNDYxMjM3LCJzdWIiOiIxIiwic2NvcGVzIjpb\
+                    XX0.Eo_GtSKX2o1Hi6YLKxvPvMJ9UKN1eMJy-WIC5Khm37aRO5GaSBwSYNm\
+                    089a631f0auCSlNJ6DQISLG0TBGLscykeK2u-Ugsr6IVKOhht1H0sfCld1F\
+                    rNkdX-Mvc6x7Rz4n_Nf4uBxcUienjvz2gSuCZImhpKf5rdlwpeLrrVoc07D\
+                    kf7oUKQEaOozRndLYC3b6a4i7b3G0yaLCyV7Mn-xS_3koTrK162skfgbSZm\
+                    P24-D_OIiM5H2Wz0PIHROqSYUM7XZiITt8bRDGkC9RlyrtxsLNskf2_zWNg\
+                    0RbEhwRBBKMVi91DWrsOtB4PuBQoWDAnDY5SiArvGL2Ns7vzI0isZU6h1Wd\
+                    SW1I6tJ6yEqrlYwG1R4y9pFnB8bFbQlaTkJGH_eD1r3Gzbqoa-xWyoS5A3o\
+                    7YFRijoWDNCuTllkxfMgkR2xJCc4hsM8n-tVrVTj_MCI0xntqcvRzCmjQLv\
+                    3crn1W-qsiUXEZQxFdtH4BkKHK5jOqAzlNN_TizYeQ29pTekj_RE3lwRBaH\
+                    mUaN-H2HhBRlg93Eq7CdMD6Z0fzy84SZ8W0AI0mNieWn5fJrgNbgCdG_N-t\
+                    lt-lQz3o2jnFFliaNuqzVU0WhZgrVHVM6fGXH5wW7kpQkjwJGdAiIqPUHE8\
+                    vqoT6ndnmN3FuNS46Vcmu7vJs_kMvnhI2AO-H0\"\r
+
+                    }\r\n"
+                headers:
+                  - name: Accept
+                    value: application/json
+                  - name: Content-Type
+                    value: application/json
+                authentication:
+                  type: bearer
+                  disabled: false
+                  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWIzYzgwOTAwOGFmMjM1MzYyODU0ZDZiMDYwMTk3YjZhZjk5YjA2ZTU5ZDg4YjZjMzQ3ZjczOGExZjQ5MzkzNTllOGZjYjkwOGUwNDAwNDMiLCJpYXQiOjE3NTg5Mjk2MzYuNjc5NzkyLCJuYmYiOjE3NTg5Mjk2MzYuNjc5ODAyLCJleHAiOjE3NzQ1NjgwMzYuNDYxMjM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Eo_GtSKX2o1Hi6YLKxvPvMJ9UKN1eMJy-WIC5Khm37aRO5GaSBwSYNm089a631f0auCSlNJ6DQISLG0TBGLscykeK2u-Ugsr6IVKOhht1H0sfCld1FrNkdX-Mvc6x7Rz4n_Nf4uBxcUienjvz2gSuCZImhpKf5rdlwpeLrrVoc07Dkf7oUKQEaOozRndLYC3b6a4i7b3G0yaLCyV7Mn-xS_3koTrK162skfgbSZmP24-D_OIiM5H2Wz0PIHROqSYUM7XZiITt8bRDGkC9RlyrtxsLNskf2_zWNg0RbEhwRBBKMVi91DWrsOtB4PuBQoWDAnDY5SiArvGL2Ns7vzI0isZU6h1WdSW1I6tJ6yEqrlYwG1R4y9pFnB8bFbQlaTkJGH_eD1r3Gzbqoa-xWyoS5A3o7YFRijoWDNCuTllkxfMgkR2xJCc4hsM8n-tVrVTj_MCI0xntqcvRzCmjQLv3crn1W-qsiUXEZQxFdtH4BkKHK5jOqAzlNN_TizYeQ29pTekj_RE3lwRBaHmUaN-H2HhBRlg93Eq7CdMD6Z0fzy84SZ8W0AI0mNieWn5fJrgNbgCdG_N-tlt-lQz3o2jnFFliaNuqzVU0WhZgrVHVM6fGXH5wW7kpQkjwJGdAiIqPUHE8vqoT6ndnmN3FuNS46Vcmu7vJs_kMvnhI2AO-H0
+                  prefix: ""
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://{{servidor}}/api/auth/register
+                name: Register
+                meta:
+                  id: req_163844e3287f4b95ba5f8e031ed27418
+                  created: 1759276189485
+                  modified: 1759276189485
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1759276187892
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \  \"email\": \"demo9@gmail.com\",\r
+
+                    \  \"name\": \"demo9\",\r
+
+                    \  \"password\": \"12345678\",\r
+
+                    \  \"password_confirmation\": \"12345678\"\r
+
+                    }\r\n"
+                headers:
+                  - name: Accept
+                    value: application/json
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://{{dominio}}/api/auth/logout
+                name: Logout
+                meta:
+                  id: req_d5d4007010684109bed32d4b6463dacf
+                  created: 1759276189487
+                  modified: 1759276189487
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1759276187891
+                method: GET
+                headers:
+                  - name: Accept
+                    value: application/json
+                authentication:
+                  type: bearer
+                  disabled: false
+                  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWIzYzgwOTAwOGFmMjM1MzYyODU0ZDZiMDYwMTk3YjZhZjk5YjA2ZTU5ZDg4YjZjMzQ3ZjczOGExZjQ5MzkzNTllOGZjYjkwOGUwNDAwNDMiLCJpYXQiOjE3NTg5Mjk2MzYuNjc5NzkyLCJuYmYiOjE3NTg5Mjk2MzYuNjc5ODAyLCJleHAiOjE3NzQ1NjgwMzYuNDYxMjM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Eo_GtSKX2o1Hi6YLKxvPvMJ9UKN1eMJy-WIC5Khm37aRO5GaSBwSYNm089a631f0auCSlNJ6DQISLG0TBGLscykeK2u-Ugsr6IVKOhht1H0sfCld1FrNkdX-Mvc6x7Rz4n_Nf4uBxcUienjvz2gSuCZImhpKf5rdlwpeLrrVoc07Dkf7oUKQEaOozRndLYC3b6a4i7b3G0yaLCyV7Mn-xS_3koTrK162skfgbSZmP24-D_OIiM5H2Wz0PIHROqSYUM7XZiITt8bRDGkC9RlyrtxsLNskf2_zWNg0RbEhwRBBKMVi91DWrsOtB4PuBQoWDAnDY5SiArvGL2Ns7vzI0isZU6h1WdSW1I6tJ6yEqrlYwG1R4y9pFnB8bFbQlaTkJGH_eD1r3Gzbqoa-xWyoS5A3o7YFRijoWDNCuTllkxfMgkR2xJCc4hsM8n-tVrVTj_MCI0xntqcvRzCmjQLv3crn1W-qsiUXEZQxFdtH4BkKHK5jOqAzlNN_TizYeQ29pTekj_RE3lwRBaHmUaN-H2HhBRlg93Eq7CdMD6Z0fzy84SZ8W0AI0mNieWn5fJrgNbgCdG_N-tlt-lQz3o2jnFFliaNuqzVU0WhZgrVHVM6fGXH5wW7kpQkjwJGdAiIqPUHE8vqoT6ndnmN3FuNS46Vcmu7vJs_kMvnhI2AO-H0
+                  prefix: ""
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://{{dominio}}/api/auth/logout
+                name: User
+                meta:
+                  id: req_a737906bca1446b3a968ca222ed98996
+                  created: 1759276189488
+                  modified: 1759276189488
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1759276187890
+                method: GET
+                headers:
+                  - name: Accept
+                    value: application/json
+                authentication:
+                  type: bearer
+                  disabled: false
+                  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWIzYzgwOTAwOGFmMjM1MzYyODU0ZDZiMDYwMTk3YjZhZjk5YjA2ZTU5ZDg4YjZjMzQ3ZjczOGExZjQ5MzkzNTllOGZjYjkwOGUwNDAwNDMiLCJpYXQiOjE3NTg5Mjk2MzYuNjc5NzkyLCJuYmYiOjE3NTg5Mjk2MzYuNjc5ODAyLCJleHAiOjE3NzQ1NjgwMzYuNDYxMjM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Eo_GtSKX2o1Hi6YLKxvPvMJ9UKN1eMJy-WIC5Khm37aRO5GaSBwSYNm089a631f0auCSlNJ6DQISLG0TBGLscykeK2u-Ugsr6IVKOhht1H0sfCld1FrNkdX-Mvc6x7Rz4n_Nf4uBxcUienjvz2gSuCZImhpKf5rdlwpeLrrVoc07Dkf7oUKQEaOozRndLYC3b6a4i7b3G0yaLCyV7Mn-xS_3koTrK162skfgbSZmP24-D_OIiM5H2Wz0PIHROqSYUM7XZiITt8bRDGkC9RlyrtxsLNskf2_zWNg0RbEhwRBBKMVi91DWrsOtB4PuBQoWDAnDY5SiArvGL2Ns7vzI0isZU6h1WdSW1I6tJ6yEqrlYwG1R4y9pFnB8bFbQlaTkJGH_eD1r3Gzbqoa-xWyoS5A3o7YFRijoWDNCuTllkxfMgkR2xJCc4hsM8n-tVrVTj_MCI0xntqcvRzCmjQLv3crn1W-qsiUXEZQxFdtH4BkKHK5jOqAzlNN_TizYeQ29pTekj_RE3lwRBaHmUaN-H2HhBRlg93Eq7CdMD6Z0fzy84SZ8W0AI0mNieWn5fJrgNbgCdG_N-tlt-lQz3o2jnFFliaNuqzVU0WhZgrVHVM6fGXH5wW7kpQkjwJGdAiIqPUHE8vqoT6ndnmN3FuNS46Vcmu7vJs_kMvnhI2AO-H0
+                  prefix: ""
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+          - name: Tenant
+            meta:
+              id: fld_8cc25679215b4a7fbe4734505b09043e
+              created: 1759276189489
+              modified: 1759276189489
+              sortKey: -1759276187889
+              description: ""
+            children:
+              - url: https://{{subdominio}}/api/login
+                name: Login
+                meta:
+                  id: req_3cf5086b4e5c4d749432e821bae869ca
+                  created: 1759276189490
+                  modified: 1759276189490
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1759276187888
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \  \"email\": \"demo@gmail.com\",\r
+
+                    \  \"password\": \"123456\"\r
+
+                    }\r
+
+                    /* Por ejemplo */"
+                headers:
+                  - name: Accept
+                    value: application/json
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: https://{{subdominio}}/api/verify_token
+                name: Verify Token
+                meta:
+                  id: req_c4973b393d99431f86e34f9630e1335b
+                  created: 1759276189491
+                  modified: 1759276189491
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1759276187887
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \  \"api_token\":
+                    \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRp\
+                    IjoiNWIzYzgwOTAwOGFmMjM1MzYyODU0ZDZiMDYwMTk3YjZhZjk5YjA2ZTU\
+                    5ZDg4YjZjMzQ3ZjczOGExZjQ5MzkzNTllOGZjYjkwOGUwNDAwNDMiLCJpYX\
+                    QiOjE3NTg5Mjk2MzYuNjc5NzkyLCJuYmYiOjE3NTg5Mjk2MzYuNjc5ODAyL\
+                    CJleHAiOjE3NzQ1NjgwMzYuNDYxMjM3LCJzdWIiOiIxIiwic2NvcGVzIjpb\
+                    XX0.Eo_GtSKX2o1Hi6YLKxvPvMJ9UKN1eMJy-WIC5Khm37aRO5GaSBwSYNm\
+                    089a631f0auCSlNJ6DQISLG0TBGLscykeK2u-Ugsr6IVKOhht1H0sfCld1F\
+                    rNkdX-Mvc6x7Rz4n_Nf4uBxcUienjvz2gSuCZImhpKf5rdlwpeLrrVoc07D\
+                    kf7oUKQEaOozRndLYC3b6a4i7b3G0yaLCyV7Mn-xS_3koTrK162skfgbSZm\
+                    P24-D_OIiM5H2Wz0PIHROqSYUM7XZiITt8bRDGkC9RlyrtxsLNskf2_zWNg\
+                    0RbEhwRBBKMVi91DWrsOtB4PuBQoWDAnDY5SiArvGL2Ns7vzI0isZU6h1Wd\
+                    SW1I6tJ6yEqrlYwG1R4y9pFnB8bFbQlaTkJGH_eD1r3Gzbqoa-xWyoS5A3o\
+                    7YFRijoWDNCuTllkxfMgkR2xJCc4hsM8n-tVrVTj_MCI0xntqcvRzCmjQLv\
+                    3crn1W-qsiUXEZQxFdtH4BkKHK5jOqAzlNN_TizYeQ29pTekj_RE3lwRBaH\
+                    mUaN-H2HhBRlg93Eq7CdMD6Z0fzy84SZ8W0AI0mNieWn5fJrgNbgCdG_N-t\
+                    lt-lQz3o2jnFFliaNuqzVU0WhZgrVHVM6fGXH5wW7kpQkjwJGdAiIqPUHE8\
+                    vqoT6ndnmN3FuNS46Vcmu7vJs_kMvnhI2AO-H0\"\r
+
+                    }\r\n"
+                headers:
+                  - name: Accept
+                    value: application/json
+                  - name: Content-Type
+                    value: application/json
+                authentication:
+                  type: bearer
+                  disabled: false
+                  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNWIzYzgwOTAwOGFmMjM1MzYyODU0ZDZiMDYwMTk3YjZhZjk5YjA2ZTU5ZDg4YjZjMzQ3ZjczOGExZjQ5MzkzNTllOGZjYjkwOGUwNDAwNDMiLCJpYXQiOjE3NTg5Mjk2MzYuNjc5NzkyLCJuYmYiOjE3NTg5Mjk2MzYuNjc5ODAyLCJleHAiOjE3NzQ1NjgwMzYuNDYxMjM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Eo_GtSKX2o1Hi6YLKxvPvMJ9UKN1eMJy-WIC5Khm37aRO5GaSBwSYNm089a631f0auCSlNJ6DQISLG0TBGLscykeK2u-Ugsr6IVKOhht1H0sfCld1FrNkdX-Mvc6x7Rz4n_Nf4uBxcUienjvz2gSuCZImhpKf5rdlwpeLrrVoc07Dkf7oUKQEaOozRndLYC3b6a4i7b3G0yaLCyV7Mn-xS_3koTrK162skfgbSZmP24-D_OIiM5H2Wz0PIHROqSYUM7XZiITt8bRDGkC9RlyrtxsLNskf2_zWNg0RbEhwRBBKMVi91DWrsOtB4PuBQoWDAnDY5SiArvGL2Ns7vzI0isZU6h1WdSW1I6tJ6yEqrlYwG1R4y9pFnB8bFbQlaTkJGH_eD1r3Gzbqoa-xWyoS5A3o7YFRijoWDNCuTllkxfMgkR2xJCc4hsM8n-tVrVTj_MCI0xntqcvRzCmjQLv3crn1W-qsiUXEZQxFdtH4BkKHK5jOqAzlNN_TizYeQ29pTekj_RE3lwRBaHmUaN-H2HhBRlg93Eq7CdMD6Z0fzy84SZ8W0AI0mNieWn5fJrgNbgCdG_N-tlt-lQz3o2jnFFliaNuqzVU0WhZgrVHVM6fGXH5wW7kpQkjwJGdAiIqPUHE8vqoT6ndnmN3FuNS46Vcmu7vJs_kMvnhI2AO-H0
+                  prefix: ""
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+      - name: Plans
+        meta:
+          id: fld_04644ed9cb55457a81b7920cd46cc49d
+          created: 1759276189492
+          modified: 1760068495587
+          sortKey: -1759276187886
+          description: ""
+        children:
+          - url: https://{{dominio}}/api/plan/list
+            name: List
+            meta:
+              id: req_0ff1666b2b474d95a5d02f630909f452
+              created: 1759276189493
+              modified: 1759276189493
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187885
+            method: GET
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{dominio}}/api/plan/list
+            name: List por ID
+            meta:
+              id: req_17f9cc9bbd8644f69b76f9f5be5cea47
+              created: 1759276189496
+              modified: 1759276189496
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187884
+            method: GET
+            parameters:
+              - name: id
+                value: "1"
+                disabled: false
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{dominio}}/api/plan/list
+            name: List by filter
+            meta:
+              id: req_cd5372e6d551487793132d93126ef692
+              created: 1759276189498
+              modified: 1759276189498
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187883
+            method: GET
+            parameters:
+              - name: name
+                value: Gratis
+                disabled: false
+              - name: description
+                value: Gratis
+                disabled: false
+              - name: paginate
+                value: "10"
+                disabled: false
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{dominio}}/api/plan/register
+            name: Registrar Plan
+            meta:
+              id: req_b5aec40f289a460ca8884b75992bced9
+              created: 1759276189499
+              modified: 1759276189499
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187882
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \  \"name\": \"Plan Premium\",\r
+
+                \  \"is_free\": true,\r
+
+                \  \"price\": 49.99,\r
+
+                \  \"description\": \"Plan con todas las funcionalidades\",\r
+
+                \  \"limit_devices\": 10,\r
+
+                \  \"limit_messages\": 5000,\r
+
+                \  \"limit_contacts\": 1000\r
+
+                }\r\n"
+            headers:
+              - name: Accept
+                value: application/json
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Tenants
+        meta:
+          id: fld_eb9db4e15f4c4d8e85cc06da741fe90a
+          created: 1759276189500
+          modified: 1759276189500
+          sortKey: -1759276187881
+          description: ""
+        children:
+          - url: https://{{dominio}}/api/tenant/list
+            name: List Tenants
+            meta:
+              id: req_b203c5cfdc0d4c60875c1cca85787574
+              created: 1759276189501
+              modified: 1759276189501
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187880
+            method: GET
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{dominio}}/api/tenant/list
+            name: List by ID
+            meta:
+              id: req_216a8751611540138f70e6d031b8ecac
+              created: 1759276189502
+              modified: 1759276189502
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187879
+            method: GET
+            parameters:
+              - name: id
+                value: 31845898-ba4b-4b59-b932-a6d34730cc55
+                disabled: false
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{dominio}}/api/tenant/list
+            name: List by Filter
+            meta:
+              id: req_c9c8e04ddd94471b9ac2b8fdd98d5431
+              created: 1759276189503
+              modified: 1759276189503
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187878
+            method: GET
+            parameters:
+              - name: domain
+                value: junco.qr.buho.la
+                disabled: false
+              - name: active
+                value: "true"
+                disabled: false
+              - name: paginate
+                value: "10"
+                disabled: false
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{dominio}}/api/tenant/register
+            name: Register Tenant
+            meta:
+              id: req_8da88866815643c28f4bfc6071766037
+              created: 1759276189504
+              modified: 1759276189504
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187877
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \  \"name\": \"EmpresaDemo\",\r
+
+                \  \"domain\": \"demooooo\",\r
+
+                \  \"email\": \"admin@empresa.com\",\r
+
+                \  \"password\": \"123456\",\r
+
+                \  \"plan_id\": 1\r
+
+                }\r\n"
+            headers:
+              - name: Accept
+                value: application/json
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{_['dominio']}}/api/tenant/delete/f06586bf-d346-42b4-963a-38db98b8b5d2
+            name: Delete Tenant
+            meta:
+              id: req_35254b1de9f44e9696be9260ba19fd85
+              created: 1759276189505
+              modified: 1759276189505
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187876
+            method: DELETE
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Devices
+        meta:
+          id: fld_1b3fd4b4d98343fab9f16600567e88ed
+          created: 1759276189506
+          modified: 1760068500139
+          sortKey: -1759276187875
+          description: ""
+        children:
+          - url: https://{{subdominio}}/api/devices/create
+            name: Create Device
+            meta:
+              id: req_dc14e9cfc2c64c54a6c70fbe5305a930
+              created: 1759276189508
+              modified: 1759276189508
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187874
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \  \"name\": \"Mi Dispositivo\",\r
+
+                \  \"phone\": \"51987654321\"\r
+
+                }"
+            headers:
+              - name: Accept
+                value: application/json
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{subdominio}}/api/devices/list
+            name: List Devices
+            meta:
+              id: req_092d683bf976418bb64500197ecf57cd
+              created: 1759276189509
+              modified: 1759276189509
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187873
+            method: GET
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{subdominio}}/api/devices/delete/{id}
+            name: Delete Device
+            meta:
+              id: req_4cd90433a361478bb199c894a750432a
+              created: 1759276189510
+              modified: 1759276189510
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187872
+            method: DELETE
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{subdominio}}/api/devices/fetch
+            name: Fetch Device
+            meta:
+              id: req_a39528bd31a14541a5a018bc484a9ac4
+              created: 1759276189513
+              modified: 1759276189513
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187871
+            method: GET
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Message Tenant
+        meta:
+          id: fld_ee9fd2e73eaa4079882dfe417b2486ed
+          created: 1759276189514
+          modified: 1765636844925
+          sortKey: -1759276187870
+          description: ""
+        children:
+          - url: https://pintumaxcolor.admiconta.site/api/message/send-text
+            name: Send Text
+            meta:
+              id: req_086371cf01054dd4a6bf2e4e8b79531f
+              created: 1759276189515
+              modified: 1765636919810
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187869
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "number": "51917038655",
+                    "message": "Hola hola"
+                }
+            headers:
+              - name: Accept
+                value: application/json
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: vMZBPpPxD0HClSh0Lu2TLuNFW0T3xp
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{subdominio}}/api/send/{{number}}
+            name: Send Message directly
+            meta:
+              id: req_3702e15948c540afaa45bee215b9a3d8
+              created: 1759276189516
+              modified: 1759276189516
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187868
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \  \"type\": \"sendText\",\r
+
+                \  \"payload\": {\r
+
+                \    \"number\": \"51929088138\",\r
+
+                \    \"text\": \"Hola desde el gateway 👋\"\r
+
+                \  }\r
+
+                }\r\n"
+            headers:
+              - name: Accept
+                value: application/json
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: apikey
+              key: apikey
+              value: 23f129milL8o5hCFcYhz9q3SwbYe2u
+              disabled: false
+              addTo: header
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Campaigns
+        meta:
+          id: fld_7b0fc154fdaf465dbe65d9d07d6a20e4
+          created: 1759276189517
+          modified: 1759276189517
+          sortKey: -1759276187867
+          description: ""
+        children:
+          - url: https://{{subdominio}}/api/campaigns/manual
+            name: Create manual campaign
+            meta:
+              id: req_5af47f05f1a743499ab35e176047f468
+              created: 1759276189518
+              modified: 1759276189518
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187866
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \  \"title\": \"Campaña de prueba\",\r
+
+                \  \"groups\": [1, 2],\r
+
+                \  \"message\": \"Hola, este es un mensaje de prueba.\",\r
+
+                \  \"schedule_at\": \"2025-10-01 10:00:00\",\r
+
+                \  \"attach_pdf\": null\r
+
+                }\r\n"
+            headers:
+              - name: Accept
+                value: application/json
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{subdominio}}/api/campaigns/list
+            name: Create excel campaign
+            meta:
+              id: req_3b29da0807ea4541a02e6357eae9d517
+              created: 1759276189520
+              modified: 1759276189520
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187865
+            method: GET
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://{{subdominio}}/api/campaigns/show/{id}
+            name: Campaign Details
+            meta:
+              id: req_82ced6fbe9b04b06bcf1d3510bec200d
+              created: 1759276189521
+              modified: 1759276189521
+              isPrivate: false
+              description: ""
+              sortKey: -1759276187864
+            method: GET
+            headers:
+              - name: Accept
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTIzODg3ZmE0MDBiZjUwNTEwOGYzY2QwZTQzZWUwNTYwM2Q1Yjc0ZDNjMjEyYzVmMjJhYjcyNzljZGEyMzQwZGZmNmY1OWM2MTljYTZhMzIiLCJpYXQiOjE3NTg5ODM0NDguMTMzMjE3LCJuYmYiOjE3NTg5ODM0NDguMTMzMjE5LCJleHAiOjE3NzQ2MjE4NDguMTMwMzA3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eFAkSdfGSWEYWvYMjRSGEEtiQBAVREYtYyvMeAFw17TrKeCjB9ppDLrB0e7Qwn1ianYzz7oSLyyw1nZeTWEfE76YqKA3rde0khCVLlabRqCmxZXlrmr9q2AuUL9pFuQSUt2stN0DITOE9LT_a_NWyiYgBbq43ykV1PCsgYF3dFA3Tw-lWhDj4Vj2D89oVAucP4UmCdqN3uZJey6QEUX3c2pdw94728Il3dsq90aMlVDruaqCi5DmtxGh9FfkkL3oNM6D-jACGzbRX6Xg2BhUVvSk5hcCMttqLZZt-UUNTmG8J_350nzM8J9MCyZJHSwC7o00nQn4jYLMjcf4cXL2IiQvwHZhVuxeb4KldqLzpRtEsbHw9rGlvGxx2RXEnM78ufUV6y4BdA2ViGPd8WYMA4VX3ZqvyLpatqbPSnK9ZZBu8QNli8E2dWxT50RtZo1QhmHAi4opQ2zqt0xLUxRhNd8a9zbPzr9gipAd9o_KirL2i9j-AcK-QFk5rKzTbzRzn6To394gIvAeiiOhzV4abuifZLgWIG2qdl-yr_B3rDSZ15gqhJe1QRxNmhpVkJ65M4ki9Jr-PjqBUKrmVxlvuhKTGteRaBPS0DulRzbo__UUyNkHySTv6mYcTUCa0MI4MZsrWWsLmGoPBGr0qDV6EEs1El4o6IvRPWUav329DCs
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_97ccdd61596ec7ff3c1f8e3c6e475bace51622c7
+    created: 1759276190947
+    modified: 1759276190947
+environments:
+  name: Base Environment
+  meta:
+    id: env_97ccdd61596ec7ff3c1f8e3c6e475bace51622c7
+    created: 1759276189523
+    modified: 1759276189523
+    isPrivate: false

@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: "QRAPI - Tenants"
+  version: 1.0.0
+servers:
+  - url: https://qr.buho.la
+    description: Main Server
+  - url: https://{tenant_id}.buho.la
+    description: Tenant Server
+    variables:
+      tenant_id:
+        default: demo
+        description: Tenant Subdomain
+paths:
+  "/api/tenant/list":
+    get:
+      summary: "List by Filter"
+      responses:
+        '200':
+          description: Success
+  "/api/tenant/register":
+    post:
+      summary: "Register Tenant"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Success
+  "/api/tenant/delete/f06586bf-d346-42b4-963a-38db98b8b5d2":
+    delete:
+      summary: "Delete Tenant"
+      responses:
+        '200':
+          description: Success

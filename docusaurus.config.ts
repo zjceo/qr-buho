@@ -57,6 +57,107 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "qr_api",
+        docsPluginId: "classic",
+        config: {
+          integrations: {
+            specPath: "api/integrations.yaml",
+            outputDir: "docs/qr-devs/api/tenant/integrations",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          send_message: {
+            specPath: "api/send_message.yaml",
+            outputDir: "docs/qr-devs/api/tenant/send_message",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          call: {
+            specPath: "api/call.yaml",
+            outputDir: "docs/qr-devs/api/tenant/call",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          chat: {
+            specPath: "api/chat.yaml",
+            outputDir: "docs/qr-devs/api/tenant/chat",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          group: {
+            specPath: "api/group.yaml",
+            outputDir: "docs/qr-devs/api/tenant/group",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          label: {
+            specPath: "api/label.yaml",
+            outputDir: "docs/qr-devs/api/tenant/label",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          devices: {
+            specPath: "api/devices.yaml",
+            outputDir: "docs/qr-devs/api/tenant/devices",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          campaigns: {
+            specPath: "api/campaigns.yaml",
+            outputDir: "docs/qr-devs/api/tenant/campaigns",
+            baseUrl: "/qr-devs/api/tenant",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          // Admin APIs
+          reseller: {
+            specPath: "api/reseller.yaml",
+            outputDir: "docs/qr-devs/api/admin/reseller",
+            baseUrl: "/qr-devs/api/admin",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          plans: {
+            specPath: "api/plans.yaml",
+            outputDir: "docs/qr-devs/api/admin/plans",
+            baseUrl: "/qr-devs/api/admin",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+          tenants: {
+            specPath: "api/tenants.yaml",
+            outputDir: "docs/qr-devs/api/admin/tenants",
+            baseUrl: "/qr-devs/api/admin",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+        }
+      }
+    ]
+  ],
 
   themes: [
     "docusaurus-theme-openapi-docs",

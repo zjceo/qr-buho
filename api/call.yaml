@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: "Call"
+  version: 1.0.0
+servers:
+  - url: https://qr.buho.la
+    description: Main Server
+  - url: https://{tenant_id}.buho.la
+    description: Tenant Server
+    variables:
+      tenant_id:
+        default: demo
+        description: Tenant Subdomain
+paths:
+  "/call/fake":
+    post:
+      summary: "Fake Call"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response

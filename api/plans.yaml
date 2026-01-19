@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: "QRAPI - Plans"
+  version: 1.0.0
+servers:
+  - url: https://qr.buho.la
+    description: Main Server
+  - url: https://{tenant_id}.buho.la
+    description: Tenant Server
+    variables:
+      tenant_id:
+        default: demo
+        description: Tenant Subdomain
+paths:
+  "/api/plan/list":
+    get:
+      summary: "List by filter"
+      responses:
+        '200':
+          description: Success
+  "/api/plan/register":
+    post:
+      summary: "Registrar Plan"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Success

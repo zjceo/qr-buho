@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: "QRAPI - Devices"
+  version: 1.0.0
+servers:
+  - url: https://qr.buho.la
+    description: Main Server
+  - url: https://{tenant_id}.buho.la
+    description: Tenant Server
+    variables:
+      tenant_id:
+        default: demo
+        description: Tenant Subdomain
+paths:
+  "/api/devices/create":
+    post:
+      summary: "Create Device"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Success
+  "/api/devices/list":
+    get:
+      summary: "List Devices"
+      responses:
+        '200':
+          description: Success
+  "/api/devices/delete/{id}":
+    delete:
+      summary: "Delete Device"
+      responses:
+        '200':
+          description: Success
+  "/api/devices/fetch":
+    get:
+      summary: "Fetch Device"
+      responses:
+        '200':
+          description: Success

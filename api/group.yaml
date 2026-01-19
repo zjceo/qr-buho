@@ -1,0 +1,158 @@
+openapi: 3.0.0
+info:
+  title: "Group"
+  version: 1.0.0
+servers:
+  - url: https://qr.buho.la
+    description: Main Server
+  - url: https://{tenant_id}.buho.la
+    description: Tenant Server
+    variables:
+      tenant_id:
+        default: demo
+        description: Tenant Subdomain
+paths:
+  "/api/group/create":
+    post:
+      summary: "Create Group"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/update/picture":
+    post:
+      summary: "Update Group Picture"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/all":
+    get:
+      summary: "Fetch All Groups"
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/find":
+    get:
+      summary: "Find Group by Jid"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/participants":
+    get:
+      summary: "Find Participants"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/leave":
+    post:
+      summary: "Leave Group"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/update/name":
+    post:
+      summary: "Update Group Name"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/update/description":
+    post:
+      summary: "Update Group Description"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/participant/update":
+    post:
+      summary: "Update Participant"
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/toggle-ephemeral":
+    post:
+      summary: "Toggle Ephemeral"
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/invite/code":
+    get:
+      summary: "Fetch Invite Code"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+    post:
+      summary: "Find group by invited code"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/invite/revoke":
+    get:
+      summary: "Revoke Invite Code"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/group/invite/send":
+    post:
+      summary: "Send Invite Url"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/api/group/update/setting":
+    post:
+      summary: "Update settings"
+      responses:
+        '200':
+          description: Successful response

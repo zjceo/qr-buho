@@ -1,0 +1,128 @@
+openapi: 3.0.0
+info:
+  title: "Chat"
+  version: 1.0.0
+servers:
+  - url: https://qr.buho.la
+    description: Main Server
+  - url: https://{tenant_id}.buho.la
+    description: Tenant Server
+    variables:
+      tenant_id:
+        default: demo
+        description: Tenant Subdomain
+paths:
+  "/chat/numbers/check":
+    post:
+      summary: "Check is WhatsApp Number"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/chat/message/mark-read":
+    post:
+      summary: "Read Messages"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/chat/archive":
+    post:
+      summary: "Archive Chat"
+      responses:
+        '200':
+          description: Successful response
+  "/chat/message/mark-unread":
+    post:
+      summary: "Mark Chat Unread"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/chat/message/delete":
+    delete:
+      summary: "Delete Message"
+      responses:
+        '200':
+          description: Successful response
+  "/chat/contact/profile-picture":
+    post:
+      summary: "Fetch Profile Picture Copy"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/chat/message/base64":
+    post:
+      summary: "Get Base64 From Media Message Copy"
+      responses:
+        '200':
+          description: Successful response
+  "/chat/message/update":
+    post:
+      summary: "Update Message"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/chat/presence/send":
+    post:
+      summary: "Send Presence"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+  "/message/contact/block":
+    post:
+      summary: "Update Block Status"
+      responses:
+        '200':
+          description: Successful response
+  "/chat/contact/find":
+    post:
+      summary: "Find Contacts"
+      responses:
+        '200':
+          description: Successful response
+  "/chat/message/find":
+    post:
+      summary: "Find Messages"
+      responses:
+        '200':
+          description: Successful response
+  "/chat/status/find":
+    post:
+      summary: "Find Status Message"
+      responses:
+        '200':
+          description: Successful response
+  "/chat/find":
+    post:
+      summary: "Find Chats"
+      responses:
+        '200':
+          description: Successful response

@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: "QRAPI - Reseller"
+  version: 1.0.0
+servers:
+  - url: https://qr.buho.la
+    description: Main Server
+  - url: https://{tenant_id}.buho.la
+    description: Tenant Server
+    variables:
+      tenant_id:
+        default: demo
+        description: Tenant Subdomain
+paths:
+  "/auth/login":
+    post:
+      summary: "Login"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Success
+  "/api/auth/verify_token":
+    post:
+      summary: "Verify token"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Success
+  "/api/auth/register":
+    post:
+      summary: "Register"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Success
+  "/api/auth/logout":
+    get:
+      summary: "User"
+      responses:
+        '200':
+          description: Success

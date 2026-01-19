@@ -5,7 +5,7 @@ description: "Verify token"
 sidebar_label: "Verify token"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzozl9shbW/TQQ9HUdnsxjGAlrSMmFEnz4cYQ+O8FqcRGEkQHiVrNzo5mdoLnY+IQv9r+DDmhsyayieVIzmnVUVTWNA/BmlIL3cAjlVM8O4aEbR+4i8g5ZwHPwVkTOBTA59WqPHoOnVeusEBik7qOQ0BBv/7yl706nBfRPrKBwMhxsD0knA0RAo7iAImGnGooxaE5VfzdCz6wP7EPkLsJyWtIDDG6IJvm6JdtGuxSE97O/EnKLDa1E1m8bZwiGzLxTvX5Q4ZthbxwCJzIK2r17MClf/bhQElHSPQ82g+JUtvbkZQpju4Fiu/ra0Lfn2h0miGnLKDMwdYxKpYSfq+/3P5Y3CzWHFjrWQ77MPN/Wq6WK2RR/Ryphmlo5PfOv9J1yTnyU2ycrsrEbNT0HMoO5BQESizzzGswe4GhBCh3mKaWAv/xOudSPib2Z8jd/mpaecsCA1PPvib5yGdIfJt38mZbpBS4TkXSu/0shl325vbXZguB9nmvR9uXHk//IOpdAgK2/mYNq9YmaDL3ie4LduYs138efhUJ
+api: eJytU8tu2zAQ/BVjzoxk91be0qAo4j7ysBMUMIyAkjYRE4pUSMqNK+hj+i39sWLFJG4dpJeWB4kkdnZnd4Y9PN13FOI7V20he5TORrKRt6ptjS5V1M7mt8FZvgtlTY3iXdy2BAlX3FIZIUAPqmkNJaC+iu6OLCRoO5/S10N9oucfL2dn+tPRvC4+lHxeXHw/nn3R87dZlmHgJeAptM4GCpznzXTKv4pC6XXLPCCx6MqSQoD4L1Q3yugKMvqOBBoKQd1w6JLZTzY/fxhducRtEHtELsnr6+0kNcrgWLsKEq0LXKRVsYZErlqdqy7W+WaMv3qKD+Q35APkqkfnDSTqGNsg8/zeZ0VXu8wo7Nf8rLSdLEYkBrEP7CNZZeOVroZXMyzHkKccAhvltSpMGvgzPo39WnUmQqKixr2aqCsq1yhteUprAZ7++c5S7//RFQLaXruRm46cB2fnh6fHk4PJOQUyJvVAPiRSs2yaTRnFIjRq9IFVDb2U649mni0S6SHmrRnbEWm6/aOSK24AAqxlqrlTcy1Qs+pyhb4vVKALb4aBr+878lvI1Xo3aT4NAjWpivwo/x1tIXGU7HywZCocbjqm9MLarHtCHJYltfGvsevfjHl6slhCoHh86Y2rGOPVN4jxKwEBN45kdMN418Moe9OlZ5Fy8voFdBtyJA==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/admin/reseller/qrapi-reseller
 custom_edit_url: null
@@ -55,7 +55,7 @@ Verify token
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"api_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9..."}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Verify token
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"valid":true,"message":"Token válido"}}}}}}}
 >
   
 </StatusCodes>

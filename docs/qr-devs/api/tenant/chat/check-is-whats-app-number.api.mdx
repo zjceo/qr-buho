@@ -5,7 +5,7 @@ description: "Check is WhatsApp Number"
 sidebar_label: "Check is WhatsApp Number"
 hide_title: true
 hide_table_of_contents: true
-api: eJx9Uslu2zAQ/RXjnVnL7ZG3NuixC2oXPRhGQVHjUAlF0lzSGAL/vRjKcZAUqQ4SNXgzfMvMiHQqlPInP5whZ2jvMrnMRxWCHbXKo3fdXfKOa0kbmhSf8jkQJHx/Rzqj1loFIqXgXaLEgA+bDX8GSjqOgadAYlu0ppSOxa6ewODOl6gbQ/p+NabVL6Ny+hjC6muZeooQmCgbP0Ai+JQhEFQ2kOi0UblzDZU6zf0QSBQfKCbI/YwSLSRMziHJrpszOeXy73Go674Yv7YKr1nsGmS1bUMg8KDiqHq7qLv2LxqPqtgMiYEm/+ag0g9+UqNjt8RrRqf4JpEvanRPNOpBgMP48Rzb50c1BUuQcxUY3dE3fmPmEm6MYpvYhmXY+/VmvUEVzcBJtVSdmuj/tr8gdA0/02Pugm2SxKJnviSyh15uvmQCgSWVg4Dh6OQe89yrRD+jrZXLp0LxDLk/PFvNf1XAkBoothjv6cxMly19t2MeDLeF+fyzsezWdWO+f9vuINBfNn3yA/dE9QeivSUg4JvGFnGrzbDK3RZ1y9hlJj9/ARahG1M=
+api: eJytVMtu2zAQ/BVjzqxlu7WT8pYGPfaB2kUPhlGsqHWkRCJpkUpjCPr3YiXbqV0kQIHyIFHU7O7szkgtat41HOIHl+2hWxhnI9soW/K+LAzFwtnkPjgrZ8HkXJHs4t4zNFx6zyZCgZ+o8iXLK9tUKdcBeo359P18vrieza8WUJhPp7O37+aLq2tsOlkKNQfvbOAggbPJRG4ZB1MXXgpDY9kYwyFsm3J0BEP9F54ZRYJeHwlDX9Atwo+cYrjxHjrWDXfqDHrq5Ry5pTJwN/TXqYtmbnM2D6MijI740echoULFMXcZNLwLQtRTzKGRmJxichhpYiQeCoHrx2HELZq6hEYeow86SdrIlmz8WWTdOG1yNy4JlyxWPWS07JNA4ZHqgtJyEOEUP0ixpaaM0Mi4ci8matLMVVRYSMuXjHb1i0Q+UWGPNLqNgsj37dmQH//VUwqF3bq+iyJKIG5zkmHKsIaS0/FkPEGn+jFX1LvFUsWvi3NG+2SqyE8x8WXfuBq6bg+6rWGGykfiCoN2G4VcBNZrtG1Kgb/XZdfJ8a7heg+93jwLIk+dQs6UienWLR54L0wH979ZCQ+Bl43w+etLEDGGiBtj2MdXsZs/PPj1y3IFhfTwV6hcJjE1/YLqrxpQcP08etP0Zy1KsncN3Ql2yCnrNxaJeFw=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -55,7 +55,7 @@ Check is WhatsApp Number
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"numbers":["51955682576","5112345678"]}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Check is WhatsApp Number
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":[{"number":"51955682576","isWhatsApp":true},{"number":"5112345678","isWhatsApp":false}]}}}}}}}
 >
   
 </StatusCodes>

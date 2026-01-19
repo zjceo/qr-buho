@@ -5,7 +5,7 @@ description: "Toggle Ephemeral"
 sidebar_label: "Toggle Ephemeral"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kc1OwzAQhF+lmrNJCkffEScEUsspqpDTbBNLju36p6Ky/O7ISQulpSdrrZndb2cTHHlrtCcPnvC0XJanI7910gZpNDhWcbsl73dRLc5i5MyuVGvT94oWz3agkZxQYBgpDKYDhzU+gMGKMICjFlbWvTPR1mEyPdCFyZM7kPPgTUJ0ChxDCNbzuk6BtNDhU3a5auNgKiVwQzFJFqupCRgOwknRqnm7H/+8405EFcDR0WjuNoptZ0YhNXLO7Jpo7+6CvAqpzxh5wyD1zkwMMigCx0vZvwCS87PjsVpWS2Q2pTUKXdRajPR/tn+mJYSjLcJAX6G2auJlM2w6xd5AWAmG/jT4JvoNw1DuxBuk1ApPH07lXL73kdwRvNn85lmqfHHh97fVGjl/A/XEy34=
+api: eJytVMtu2zAQ/BVjz4ylOE6Q8tQHggIFghZ1ejKMYi2tLboUSfOR2hX0Sf2K/lixVOIkddNLyoNEkbvDGc6uOvC0TRTiW1vvQXZQWRPJRJ6ic1pVGJU1xSZYw2uhaqhFnsW9I5BglxuqIgigHbZOE2+tvU3ug6pBwumkPLs4m5bT6avzcjK5PJ++Xo9T4HjXUEseNcjLi2lZ9jwEeArOmkCBgSZlya+aQuWVYyIgYZaqikJYJT26DwbxX3i3FAKuefeaTMANhRGtfv1sydswwiom1OoH1jaMaKeiDdiSiXx4jRFfJpylP5V5Y9drTaOrQ7SAlmJjGdzZwNQdxgYkFOhUkY8uYk46oUdJgfwt+QBy3kHyGiQ0Mbogi6KLZNDEr6rux8vU2LFGOGKRQ0azDAICbtErXOrBnkP+YNIKk44goabWPguUlrVtURlgyX8y2vpniVyjMvc0+oUANvbzQ+levbT6BCizslmVigwE7xmHJZMPA4fTcTkuoRf5/lvMhWWwpb+79YT/oe4i7WLhdL4BMcjv7oycAzoFYhAAAo7MXAho2Hk5h65bYqAvXvc9L28T+T3I+eLBIf7qBTSENfns/jfag4R3Q6Oc3DAfDteJeR01DbszZLypKnLxn7GLR8X56ePsBgQs734ora05x+N3EPkpAQTYfC+5ivJaBxrNOg3dN2Dy+A1DRo/b
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Toggle Ephemeral
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Toggle Ephemeral
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"groupJid":"120363404495022854@g.us","ephemeral":86400}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Toggle Ephemeral
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Mensajes efímeros actualizados exitosamente","data":{"groupJid":"120363404495022854@g.us","ephemeral":86400}}}}}}}}
 >
   
 </StatusCodes>

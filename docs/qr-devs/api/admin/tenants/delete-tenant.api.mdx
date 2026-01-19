@@ -5,7 +5,7 @@ description: "Delete Tenant"
 sidebar_label: "Delete Tenant"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNUstqwzAQ/JUwZzl28yLVrZAcCi20TXoKoUjxBgtsSZHk0GD078V2+goN9CSk3ZnZnVEDR94a7cmDNxhlWXvk5HdO2aCMBseq3u3Ie8TILioLKinQYE1a6ACGikJhcnDkXQEMVoQCHKmwKg1dW9rX0n02m85ncp/k48ksmYzkJLmdjUUynufydi7ncpqPwODJHcl58E2D2pXgKEKwnqfpwQ1lXZhhKXA516NQerDqkIjsEtj0g7ypPF5l6Ff65GA4CqeELHuXvvC9V3tRl6FbujJXiWqZm0oojRjjlkHpvemoVCgJHM8vd0/3g+RspW8Vyfme4maYDTNEBmt8qIRucVpU9EcAv7QbhJNtuwK9h9SWnTrrzWjOyWwgrAI7r9QxnJP7Vz5bhsL40PI0jRSeXl0ZY/t8qMmdwDfbb+/aW/zxSRbLh+V6iRg/AOTc1C8=
+api: eJx1U8Fu2zAM/RXjnTZAi7MddSuQHApswNZ2pyAYGIup1cmSIslFAsP/Pkj2kjVZfbEt8j2S71EDPAXqOHGIkJsBljqGhFYQ0BYSnlILgcCHXgdWkCn0LBCbljuCHJBOPiNiCto+YxRQHJugfdIu45/Ykk3V/QrjNtNE72zkmJFflsv8epv/2DcNxwiBxtnENuUU8t7ohnJK/RJz3nDbgdu9cJMgwEfqvOEc6jhGeuZLH2x0py0pV/FRJxepY5sYY3mue1+x4cTVBIVAx6l1ChKqBCAmdSRq8rpOJa2eYvWg1QiByOH1r7Z9MJBoU/JR1vUhLHZ96xaGcF33G2lbPRYkRnENHKZCv7Qa32WYp505BF4paNqZSfczflJ/T71JZajOvUvU75TrSNus1Davxt4VKp2y0PjxcPf9vvo0S5Xdy1NPFJ8Xy8UyL4Z3MXVUzJvX7FrgN7XPxiY+ptqbUl1MYgyz8huQ1xDzSIVhdkZqha1A62LKacOwo8g/gxnHfHzoOZwgN9uLNMUipWP+VpB7MpFvOjrvJD48zDfiY3VZcfH/ludDsqdihenzHwR+82m6a+N2FGiZFIfSxhS4axr26R/IzTXIVpyXcrX+un5aYxz/ANeaTTc=
 sidebar_class_name: "delete api-method"
 info_path: qr-devs/api/admin/tenants/qrapi-tenants
 custom_edit_url: null
@@ -29,7 +29,7 @@ import Translate from "@docusaurus/Translate";
 
 <MethodEndpoint
   method={"delete"}
-  path={"/api/tenant/delete/f06586bf-d346-42b4-963a-38db98b8b5d2"}
+  path={"/api/tenant/delete/{id}"}
   context={"endpoint"}
 >
   
@@ -39,8 +39,16 @@ import Translate from "@docusaurus/Translate";
 
 Delete Tenant
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string"},"description":"Tenant ID"}]}
 >
   
 </ParamsDetails>
@@ -55,7 +63,7 @@ Delete Tenant
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"message":"Tenant eliminado exitosamente"}}}}}}}
 >
   
 </StatusCodes>

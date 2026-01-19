@@ -5,7 +5,7 @@ description: "Update Message"
 sidebar_label: "Update Message"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzqzl5Mhjix6DBrVzMoxiJa0jpRRJ85HGEPjvxVKOg6SNDhK12B3OY2cEPmWO6avrz9AzOmcT2yRH8t6MHaXR2eYpOiu12A08kZzS2TM0XPvEXUIppSgEjt7ZyFEabjcb+fQcuzB6QYHGNncdx3jMZvXaDJl83/Xge0q8uuMY6ZGhMHEaXA8N72KCgqc0QKPpBkrNtLQ1uU5BIXJ45hCh9zNyMNAYUvJRN82c2JJNv8a+rNs8uLUhfLx8V1tW2woChWcKI7VmEXWdX6QdKZsEjZ4n9ylQbns30WjFJPWR0Sl8SuSORvtKoxwUJIOfb2l9f6HJG4aei8Joj67yG5OU8G0g8UlsWMBu1pv1BkVVByeqYVqa+H9uv6NxTTrxS2q8qULUomK+BLFHt9w3XTEuYRwUBolM7zHPLUV+CKYUKZ8yhzP0/vDmsPwVhYGp51DT+81nEbPs5JedEJF2k4XQP/spJl035f7HdgeF9rLXk+tlJtAfqPrWgIKrImuytTbDkH3MIkFjwZTnL6t9FWk=
+api: eJzNVEtv00AQ/ivRnJc4dduE7gmatAekCETbUxShsT2pXbyP7qMPLP93NGs3hUI5IcQe/BjP45tvvnEHjm4j+XBqqkeQHZRGB9KBH9HatikxNEZnN95otvmyJoX8FB4tgQRT3FAZQAA9oLIt8ScdVUEOJHSdI2UCfWiqvgcBXynV2BtBwkF++M5P72sMHq2dauJcO2fUmkAGF0lA8js8O50drZbzk9XJ4u3h8WqxXM7PD/LFYr7Kjxfz+fnpMs+PznLoBQR6CCBB0/1Ekfd4TdDzEeDIW6M9eYaRz2Z8q8iXrrHcJki4iGVJ3u9iO3lyBvFXWHmCImFN2uMNTbAMEdvmG1ZmQg9NMB4V6cAFKwwp3z9hbDziBRVXtsJAk/WIW4CiUBtObY3nohZDDRKyssaQje1lMUWBAE/ujpwHuekguhYk1CFYL7OsC6RRhy9N1U+LWJtpi/Cy+GVymVykJCDgDl2DRTtMbh8/zG+HseWBV6TMq4liURmFjeZ2xUtEt+5VIGts9BOMfiuAZ/75eWfO/m/ZC2j0ziTOmsAwYVkj1+LRDA0eTGfTGXvyVBUmQWtU9DsF/ETNXu1cOLNtIlcMzHajODZQDvXUPscokK2AmmUkN9B1BXq6cm3fs/k2knsEudk+T53fegE1YcUMb8bFgOWwl28uGQi7t5EB/bKjPPEh4n1Zkg1/9N3+oPRPHy8uQUAx/h2VqTjG4T2IdJUAAkwiJCkz2TpoUV/HYdmHnHy+A5eBzeg=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -55,7 +55,7 @@ Update Message
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"number":"{{remoteJid}}","key":{"remoteJid":"123@s.whatsapp.net","fromMe":true,"id":"3EB04DC69D97835D7CC6F12776D25766FBC224E2"},"text":"new message"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Update Message
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Mensaje actualizado exitosamente","data":{"key":{"remoteJid":"123@s.whatsapp.net","fromMe":true,"id":"3EB04DC69D97835D7CC6F12776D25766FBC224E2"}}}}}}}}}
 >
   
 </StatusCodes>

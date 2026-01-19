@@ -5,7 +5,7 @@ description: "Update settings"
 sidebar_label: "Update settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kc1qwzAQhF8lzFnYbo96gZ5KC0lOJhQ53sQCW1KkVWgQevciO+lPaE5ixczut7MJnoKzJlCATHhumvL0FPZeO9bWQGId93sK4RDH1U2MnMWdaut6xbQKxKzNMUBgIh5sDwlnA0PAKR4gUSun66O30dVx9tRXDwQC+TP5ANkmRD9CYmB2QdZ1YjLK8Ifuc9XFwVajwj3CZpas1nMTCJyV16obl9W+/cuCBxVHhkRPk33YKHa9nZQ2yDmLe6KTfwjyqrS5YeSdgDYHOzNoHgkSL2X7Akg+LI6nqqkaZDFnNSlT1EZN9G+wf4Yl8MUVHdMn126cccXCmq6Zt1BOQ+B4nbvkPue9JL8TGMqRZIuUOhVo68ecy/cpkr9AtrufOEuVf533/W29Qc5fL37KGQ==
+api: eJy1VNtu1DAQ/ZVons0m3W4R+ImLEBISAtH2abVCs85s4uLYrj0uXaJ8FZ/Aj1V2eqGFIh7AD4kznss5c8YZIdB5osivXLsHOYJylsly3qL3Ritk7Wx9Fp3Ntqh6GjDveO8JJLjtGSkGAXSJgzeUj7rgkn+nW5BwsGwOnx6umtXq+VGzXD47Wr3oFimCgEjM2naxVLLWJatoKJU5JBIQKHLQikHu0ESayipm72ykErdsmvxqKaqgfQYKEo6TUhTjLpnqxhnEP+E1UIzY5dPXzu50lwIq/eO7rVoyVReSdxUqTmj0N2yxokvNLmImlRG0yPiX3Zlu2N5ndupbZKpuOydgIO5dzuRdzGA9cg8SavS6LnXqVGLq65jS93BBIYJcj5CCAQk9s4+yrkcmi5Y/63ZabFPvFgbhIYST4lIdlyQg4AKDxq2Z5biNn0XZYTIMEloa3KOJ0rZ1A2qbOYuHiM7Do0Deo7Y3MKaNgCzkp7tRfvO/p1GAtjtXWGvOheBtrpNbQiHOGA8WzaKBSRR1BiyDZnGg30p5j97tGDJdcu1NaZCYuzNeq7wG9BrEzA8EzErfcYGNgD6PhVzDOG4x0mkw05TN54nCHuR6cydg/poE9IQthTIcX2g/T3q+N09OMp7sblLG9csdyuLNES+VIs9/9N38NLkfPxyfgIDt9f9ncG2OCfgVRHlKAAGu9KWoU2wjGLRdmi/jnDOvK61XpRM=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Update settings
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Update settings
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"groupJid":"120363404495022854@g.us","settings":{"announcement":true,"restrict":false}}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Update settings
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Configuración del grupo actualizada exitosamente","data":{"groupJid":"120363404495022854@g.us"}}}}}}}}
 >
   
 </StatusCodes>

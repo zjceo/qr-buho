@@ -5,7 +5,7 @@ description: "Create manual campaign"
 sidebar_label: "Create manual campaign"
 hide_title: true
 hide_table_of_contents: true
-api: eJx9Uj1v2zAQ/SvGmxnL7citDTp0KJrE7mQYxUm6WEwokiapNIbA/16cZDtNglSDRJ7eHd7HjYh8GDjlr749Qo9ovMvsshwpBGsaysa76iF5J7XUdNyTnPIxMDR8/cBNRimlKEROwbvESQCfVyv5tJyaaIJMgcZ6aBpOCYJ+/ec6MmVe9OQGsouG+kBm76DQc+58C43gU4ZCoNxBo6JgqjMsVXMfFBLHJ44JejtiiBYaXc4h6aoaMzty+bdpy7IeOr+0hLcsNhNksZ6GQOGJoqHazoou/bOuexpshkbLvf9w0FC3vifjxCH1ltEhfkjkBxl3plF2ChLA3UtU356pD5ahx6Jg3L2f+JksJdzefbn5vrhaXJ/dESEc0zz503K1XKGoyc+eplgd9fy/DF5xu2Sf+TlXwU7q1CxtPMWzBQUDheYfCqeIdgqdJKm3GMeaEv+KthQpHwaOR+jt7sV3uRWFjqnlOGX6yEdhOq/p1UaYCNwOwujdyop1lwW6+bneQKE+rXrvW+mJ9AdqemtAwU8qp7yn2ghLbj/QXrDzTHn+AlyqG2o=
+api: eJzNVMtu2zAQ/BVhz7QlG+iFtzYo0B6Kpkl6MoxgJW4sphTJ8JHGEPRR/Yb+WLGUYyctklOBVhAkitpdzc7OaIRAd5lieufUHuQInbOJbOIlem90h0k7W99GZ3kvdj0NyKu09wQSXHtLXQIB9ICDN1Re6cQLOMPB488fWCmqfMjUIgjYBZd9BLlZifVWwEAx4o6jPziDoqKYqKJYZVsNZCPe0il7CaIAUNnQNSaQsG7WbxarZtGsqlUjGz5BAKaEXX/t1Q1Im42Z+BAQKHpnI0XGuG4avimKXdCeewQJl7nrKEYQf4WGU2tHIrpAqLCiB51cxIFsIhCgMJVaWoFciX9OX0yYcgR5DFYwTQcOn/N1FggTVQPajKbqGK/eWWBYqXcKJHgXmRWPqQcJNXpdP4bFes7jL1K4p8BdjZCDAQl9Sj7Kuh4TWbTpWqtp2ebeLQ2T8BzFVQmpLksREHCPQWNr5jkf8+dp32A23Lmiwb1YKLfKDagtty1+R3QXXgTyCbV9hDFtBbBaLk72ev8fO0SAtjfuKbQvF2/PP1aL6uxxXMwshTi3ulo2ywYmUQY8YDGFxYFeE8Uzso7OSfSQam8K3WLmejzoZQPoNZvxCYSDZrYCepaW3MA4thjpazDTxNt3mcIe5GZ7EgI/TQJ6QkWhiOwb7RnpbPLFFSPhcJMZ0R+GZxHMGW+7jnx6NXb7RP3nny+vQEB7+LcOTnFOwO8gylUCCHCFkSLWsjeCQbvL88jnmnz8Alis6G8=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/campaigns/qrapi-campaigns
 custom_edit_url: null
@@ -55,7 +55,7 @@ Create manual campaign
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"title":"Campaña de prueba","groups":[1,2],"message":"Hola, este es un mensaje de prueba.","schedule_at":"2025-10-01 10:00:00","attach_pdf":null}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Create manual campaign
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"message":"Campaña creada exitosamente","data":{"id":1,"title":"Campaña de prueba","groups":[1,2],"message":"Hola, este es un mensaje de prueba.","schedule_at":"2025-10-01 10:00:00","status":"scheduled"}}}}}}}}
 >
   
 </StatusCodes>

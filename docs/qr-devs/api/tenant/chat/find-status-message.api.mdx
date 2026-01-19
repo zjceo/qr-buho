@@ -5,7 +5,7 @@ description: "Find Status Message"
 sidebar_label: "Find Status Message"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kc1qwzAQhF/FzFnYbo+6FnoLLSQ9mVBke10LZMmRVqFB6N2L7aY/gZzEitndmW8TPIXZ2UABMuGxrpenp9B5PbN2FhL72HUUwhBNcRUjZ3Gjeta2L/asOIZiRyGoD4LARDy6HhKzCwyBWfEIiaobFVdhVVeDtj0EAvkz+QDZJERvIDEyz0FWVWKyyvK77nPZxtGVRuF2/WGVFPt1CATOymvVmi3WT/8WblDRMCR6mtzdQbHt3aS0Rc5Z3Do6+btGdkrbq418FNB2cKsHzYYg8TSqBcQSdWt4KOuyRhYroknZRWzVRHeZ/tuXwJd50TJ9cjWb1bHY7KZv3A26bekGHAIr8qPAuFxFNkipVYHevMl5+T5F8hfI5vjLcanyn3u+vuwPyPkL4zrFEw==
+api: eJytVE1v2zAM/SsBz1qcum2y6rTl6zAg2LCmpyAYaIuu3dmSI8ltAsP/faCcNGu37DQdbJnix+Pjk1uwtGvI+alRB5AtpEZ70p63WNdlkaIvjI6enNFsc2lOFfLOH2oCCSZ5otSDANpjVZfERy85Wd50YQmw5GqjHTk+jEcjfilyqS1qTg4S7ps0JeeyphycnEH8FywKPYLctPCTQn+WKuPpS6FAgvPoG/cpsQZVio4jM2uqFYHMsHQkILhdL6ajm/lsfDe/m3y8vp1PZrPx8iqeTMbz+HYyHi+nszi+WcTQCajIOXwMlWnvSStSa9r71dnsae+541B70NQKPUHXddsTW2+ZWRZaDY7OpyxcxueGsdUmwK7R5yAhSnP0Ud9WlBVagQBH9pmsCxw0tgQJufe1k1HUetKo/Y9CdcOkyc2wRHhffh1cBvchCQh4RltgUvajfI3vB5phU3JriipzMVGTKFNhobll8R7Rzl4EssJCn2B0WwEsgu9n6S7+pj4Bhc5MQFp4PoRZjkwXE9KnvRqOhiMeHBNZYdCVxoouMv8G1avyeKhRXYa+RN9UexzKBtK+aD8W1hgPZisg59nJDbRtgo4ebNl1bN41ZA8gN9sz2/zVCcgJFdmzmmHWX5APa0bB7mXDaP64LMx0H/E5Tan2//Td/iavb1/v1yAgOf4cKqM4xuILiPCUAAJMYCMoIthaKFE/NkHv0Ofk9Qvq2oIx
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Find Status Message
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Find Status Message
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"where":{}}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Find Status Message
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":[{"key":{"remoteJid":"status@broadcast","fromMe":false,"id":"3EB04DC69D97835D7CC6F12776D25766FBC224E2"},"message":{"extendedTextMessage":{"text":"Status update"}}}]}}}}}}}
 >
   
 </StatusCodes>

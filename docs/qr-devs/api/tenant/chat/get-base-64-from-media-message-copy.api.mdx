@@ -5,7 +5,7 @@ description: "Get Base64 From Media Message Copy"
 sidebar_label: "Get Base64 From Media Message Copy"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNkc1qwzAQhF/FzFnYbik96NhAewotJD2ZUGR7UwtkSZHk0CD07kV20p9AoSchMbv6ZibCkbdGe/LgEbd1nY+efOekDdJocGymriPv95MqLmKkxK5UTxSKB+Hp/q54dGYs1tRLUazJe/FOxcrYExhGCoPpwWGND2CwIgzgqLpBhGpctFU7bwGDJ3ck58GbiMkpcAwhWM+rKgbSQoc32aeynQZTKoFroO0sKTbzEjAchZOiVYvRr/nF7l5MKoCjp9H8uWhqezMKqZFSYtdEB/cnyFpIfcFIOwap92ZmkEEROFaDyFlkq8vATVmXNRKbUxqFzmItRvpvyr++jwgnm0cDfYTKqtkAW+jjuYAG3cJwrgAM5xJ2DEOuijeIMb+9OpVSfj5M5E7gze472XxLP0p+ed5skdIn7OXPOw==
+api: eJy9VFFP2zAQ/ivRPXtJCdAOPy1NC9KmjonCXqpqcpNrYxbHxnaAKsp/n84psDEx7WGaHxLncvf583ef3YHFuxadn+pyD7yDQjceG09TYUwtC+GlbpJbpxuKuaJCJWjm9waBg97cYuGBAT4KZWqkX98xQFlU2uNHWQKHo/T4g4sfKuGdMCZukEq2VqsFAve2RQYh73g+HZ3M8vHZ7Gzy/vh0Nsnz8flROpmMZ+npZDw+n+ZpejJPoQ+DgUVndOPQ0YrpaESvEl1hpSHiwGHZFgU6t23r6CkZ2D/ZZyl8SNkIh+MT4CC/Ti+vHkafLnY6y7Ls8/Kmmt/ssiyOY2CgpMIDmlRih8mtwd1hIz17xfoCfTQNuNG51SpaYClFtEDnxA6jXJs9IaKvNMlmtCNuRvgKOCRFJXyihtzkwI6BQ3uP1gFfddDaGjhU3hvHk6Tz2IjGf5NlH2/aSse1gNeErkNKtAwgwOBeWCk29SD8c/0g/1a0tQcOJSr9JlC7KbUSsiEF2GtGd/ZNIgshmyca/ZoBtezqxcTz/+1DBrLZ6qCC9LQw5JUgWBJ7oHwUj+IR9Cz0SYngsEYo/Ns+/yLAsyU9PvrE1EFCNujXHSywgmLgcDABsCeTrhlUZBa+gq6j2I2t+57Cdy3aPfDV+qW39NUzqFCUaINvgqSQD4fn3TURofS6JUK/HSTq61CRFQUa/8fc9U9+/nK5vCbOh0tJ6ZJqrHgAFp4cgIEOggT/hVgHtWh2LW2Xw4BJ4wctZp65
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Get Base64 From Media Message Copy
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Get Base64 From Media Message Copy
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"key":{"remoteJid":"123@s.whatsapp.net","fromMe":true,"id":"3EB04DC69D97835D7CC6F12776D25766FBC224E2"}}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Get Base64 From Media Message Copy
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":{"base64":"iVBORw0KGgoAAAANSUhEUgAA...","mimetype":"image/jpeg"}}}}}}}}
 >
   
 </StatusCodes>

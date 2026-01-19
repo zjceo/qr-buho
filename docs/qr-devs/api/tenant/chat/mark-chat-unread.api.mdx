@@ -5,7 +5,7 @@ description: "Mark Chat Unread"
 sidebar_label: "Mark Chat Unread"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Uktv2zAM/ivBd1bjbEcdV/RYbFjSUxAMtM3UbmTJ0aNrYOi/D5ST9LXqYNEESX0PTvB8TBziD9eeoCc0zka2UUIaR9M3FHtnq6fgrORC0/FAEsXTyNBw9RM3ETnnrOA5jM4GDlLwfbWSq+XQ+H6UKdBYp6bhEPbJLC7FkM73VffkD4vbjuLiwXqmFgoDx8610BhdiFAYKXbQqJqOYjVwCPTI1UD+cJMuLYH9M/sAvZ2QvIFGF+MYdFVNkS3Z+Kdv87JOnVsawkcMm1KyWJchUHgm31NtZm7X/pnhnpKJ0Gh5cF8OSnXrBuqtaKU+Ijr6L4HcU28vMPJOQaz4/Wra3QsNo2HoKSv0du8Kvj5KCqKhYGcf5mHflqvlClkVGQcqnloa+P+ivwNytTzyS6xGU6iomcd09mOLZn7x7IhEbzzZKXRin95immoK/OBNzpI+JvYn6O3uVWj5ywodU8u+mHjgk3CaN/RmI2ik3CRB9WlbRavr1vz6ud5AoT5v+eBa6fH0F6p8NaDgCtNicMlNMGQfk/DQmGfK+QdLJRnV
+api: eJzVVMtu2zAQ/BVhz4xlO3Vi61THiQ8FjBZNcjKMYi2tI8V8maTygKBP6lf0x4ql7CR1m556KQ8SSe0Oh7OzasDRriYfLkzxDFkDudGBdOApWiurHENldHrvjeY9n5ekkGfh2RJkYNb3lAcQQE+orCT+JNGHBXmPd3G5pYjsSJlAn6oCMhgNBsPTD6Oz8/FH33ssMXi0tqeJgTbOqAVBtkHpSUCMn87OL6eXF/Ph2Ww8n0/m52fji+Fs3h9Mx1fT0XgAbSsgLzFE7MmgfzoZT0ajY/CWhwBH3hrtyTOtYb/Pr4J87irLl4UMrus8J+83tUwOwSD+iTbqoAvMSgyJQpdjYZLcKJNok0j68b0wCT1VwXhUpAN1rFtxRHGBbptEjFvtCAsQoCiUhuWyxvOxFkMJGaQsTLo/OFXotif1IcWTeyDnIVs2UDsJGZQhWJ+laRNIow7fqqLtrevS9CTCMYebGJJcRxAQ8ICuwrXshH3J7+TdYC25PAUp8y5QvS6MwkrzncUxo517l8gCK32g0a4EcEm+vhr76n/wpoBKb0xUrgry4BBWlZzvrjno9Xt9juQCK4yu06joz3b4RaIXUwZ6CqmVUWTRKdzsnbLsaIoXkwp465aVgJKNlS2hadbo6dbJtuXtXU3uGbLl6tUCvGoFlIQFuWivKDXMuh46uWE2HC5rZvVbP3H5u4xpnpMNf41dvfH+l8/XNyBgvf+fKVNwjsNHEPGZAQgwUZVo07jHvtB3ddeYHSaPn56Xtnk=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -55,7 +55,7 @@ Mark Chat Unread
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"lastMessage":{"key":{"remoteJid":"5112345678@s.whatsapp.net","fromMe":false,"id":"AC7DADBF26C8FF9F768B2CF01A8EA581"}},"chat":"51910398955@s.whatsapp.net"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Mark Chat Unread
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Chat marcado como no leído exitosamente"}}}}}}}
 >
   
 </StatusCodes>

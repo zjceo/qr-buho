@@ -5,7 +5,7 @@ description: "Find Chats"
 sidebar_label: "Find Chats"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kU1rhDAQhv/K8p6D2h5zLfRWWtjtSaREHTEQEzcZly4h/71Eu/0Q9hQS3pl55kmEpzA7GyhARjxWVT56Cp3XM2tnIXFcuo5CGBZzuIWRktilnrXtD0+j4gCBiXh0PSRmFxgCs+IREmU3Ki4HbXsIBPIX8gGyjli8gcTIPAdZlpHJKssfuk9Fu4yuMAr7cac1cjiuTSBwUV6r1mxr/NRvywxqMQyJniZ3t9HS9m5S2iKlJPZEZ38X5EVpe8NIjYC2g1sZNBuCRFaS+ciHreChqIoKSaxuJmVz2KqJ9g7/jYng65wjTJ9czmYFFRtl/NZbo9tmrYIbgTHLlzVibFWgd29Sys/nhfwVsm5+reVb+vNtb6/HE1L6AryQuEA=
+api: eJytVE1v2zAM/SvBO2uJ0yFtosOwNG0OA4INa3cKgoGxmdqdLCmS3LQw/N8Hyf1YOnTbYTrYskTyke+RbuF437AP56Z4gGyRGx1Yh7gla1WVU6iMHt16o+OZz0uuKe7Cg2VImO0t5wECfE+1VRyvDiW7tGm0YyoWpukDfoDMun4JOPbWaM8+3pxkWXwV7HNX2YgIiasmz9n7XaMGT8YQ/yXBggJBrltUBSQm49k4ez+bziaTj354KCl4snaoOXodlTARUOTDir2nmxTpByfWHNcm8Ke/h9s5U68YckfKs+jx54uzi/nF+fLkdDFdLmfLs9Pp+climY3n08v5ZDpG13WbJ9qOKVpWuhgsIgQEag6liQGt8RHLUighMcpLCqNdpQsIeHZ37HwqvnEKEmUI1svRqA2sSYfvVdENt01phorwGu46mQyuUhAI3JGraKt6DZ/9eyV31KgAiYJr82agZluYmiodSxSvM9q7NxNZUaWf0ug2AlH9ry+NfPnPvShQ6Z1J6VcheiCyGUtj53us8TAbZuhEorWm1GWaan5N/1GGz+0X+D6MrEo1ir7A9lGZNfIeK2mzESijbnKNtt2S529OdV083jfsHiDXmxfC41cnUDIV7JKYqRGx6Ifj3XUEj+aqiUn8NiiR7N5jnudswx9tN7+01pfPV9cQ2D7+LWpTRB9HB4j0lICASSSkpkhnLRTpmyaNDPqYcf0E2LuC1g==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Find Chats
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Find Chats
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"where":{"unreadCount":{">":0}}}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Find Chats
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":[{"id":"51910398955@s.whatsapp.net","unreadCount":5,"lastMessage":{"key":{"remoteJid":"51910398955@s.whatsapp.net","fromMe":false,"id":"AC7DADBF26C8FF9F768B2CF01A8EA581"}}}]}}}}}}}
 >
   
 </StatusCodes>

@@ -5,7 +5,7 @@ description: "Fake Call"
 sidebar_label: "Fake Call"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Uk2P0zAQ/SvVO5umcPQRBDcEouVUVWiSTDfZOrbrj2WryP8djdPtaos2h8QZvRm/j5kR+Jw5ps+uv0DP6JxNbJMcyXszdpRGZ5vH6KzUYjfwRHJKF8/QcO0jdwmllKIQOHpnI0cBfNps5NNz7MLoZQo0trnrOMZjNqsXMKTzLeobnXj1hYyBwsRpcD00vIsJCp7SAI2mI2OaI50YCpHDE4cIvZ+Rg4HGkJKPumnmxJZs+jP2Zd3mwa0N4f62XYWstnUIFJ4ojNSaRcWtf9FypGwSNHqe3LuDctu7iUYrrqh7RufwLpHvNNoXGuWgIKb/eo3n6zNN3jD0XBRGe3SV35ikhKtbYsMy7ON6s96gqOrbRDU9SxPf2fuGwS3VxM+p8aZqUIuA+er8Ht3SWb0/KAySi95jnluK/DuYUqR8zhwu0PvDq6HyVxQGpp5DDevEF+G+7NyHnVwucJOFxH/7J57c1uHnj+0OCu11byfXS0+gv1D1rQEFV4XVIGtthiH7kOlBsMtMef4BRqwIsg==
+api: eJytVMtu2zAQ/BVjzqztBHDa8tbnqUWLJu3FMIqVtI6YUKTMhxtD0L8XSzlJkyI9tOVBWpHL5czOUAMC7zLH9No3B+gBtXeJXZKQ+t6ampLxbnEVvZO5WLfckUTp0DM0fHXFdYIC31DXW5Yll7uKAzRWJy9Xq7MXp6vnZ1Aw8Ztp2ENvyUZWqMnatzmUA6BXowyFwLH3LnKUSqfLpbwajnUw/ZSI81zXHOM229ltMtR/Ad5xjHQpqx8sddTQLJouWwmMM7WhhqDQUKK/p6kQE6UcoUF1MnvGOB6pP6T5nq559oashULHqfUNNHofBXNPqYXGQmovtnQtDYgc9hwi9HpADhYabUp91IvFkNiRS99NM86r3Pq5LTQenHZRUmbnpQgU9hQMVXaS4W7/JMaWsk3QaLjzTxbKVeM7Mk7oqceIduFJIB/JuFsY40ZBBPxy79F3/2wzBeO2vtAySSrh2GTp3oThZL6cLzGq0u6OioEcdfxIlQfA74yV+CYteluoq4n3cBRsXcBAoUi2UWhFTr3GMFQU+Wuw4yjTu8zhAL3e3OsgX6NCy9QI5/WAaz4I9sn2zy7kcEm3WUD8dgVEg2nHq7rmPv0xd/OL4z5/Or+AQnX8P3S+kT2BfkCVpwYUfGlC8UqZG2DJXebpLk01ZfwEozx/Qw==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/call/call
 custom_edit_url: null
@@ -55,7 +55,7 @@ Fake Call
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"number":"51955682576","isVideo":false,"callDuration":5}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Fake Call
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Llamada simulada iniciada","data":{"number":"51955682576","isVideo":false,"callDuration":5,"status":"active"}}}}}}}}
 >
   
 </StatusCodes>

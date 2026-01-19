@@ -30,6 +30,23 @@ paths:
       responses:
         '200':
           description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  {
+                    "data": [
+                      {
+                        "number": "51955682576",
+                        "isWhatsApp": true
+                      },
+                      {
+                        "number": "5112345678",
+                        "isWhatsApp": false
+                      }
+                    ]
+                  }
   "/chat/message/mark-read":
     post:
       summary: "Read Messages"
@@ -57,12 +74,7 @@ paths:
                 type: object
                 example:
                   {
-                    "data": [
-                      {
-                        "number": "51955682576",
-                        "isWhatsApp": true
-                      }
-                    ]
+                    "message": "Mensajes marcados como leídos exitosamente"
                   }
   "/chat/archive":
     post:
@@ -91,14 +103,6 @@ paths:
                       "chat": "51910398955@s.whatsapp.net",
                       "archive": true
                     }
-                  }
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  {
-                    "message": "Mensajes marcados como leídos exitosamente"
                   }
   "/chat/message/mark-unread":
     post:

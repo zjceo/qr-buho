@@ -5,7 +5,7 @@ description: "Update Group Picture"
 sidebar_label: "Update Group Picture"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzqzl9shji6KnIkHtnAyjWElriylF0nykMQT9e7GU4yApooNELWaHszM7IfK5cMpffX+BntB5l9llOVII1nSUjXfNY/JOaqkbeCQ55UtgaPj2kbuMeZ5nhcgpeJc4CeDLZiOfnlMXTRAWaGxL13FKx2JXL2BI51vUQ+gp8+pH9CWs7k2XS2QojJwH30Mj+JShECgP0GgomOYk2KbUxibcWhLHJ44Jej+hRAuNIeeQdNNMmR25/Nv087otg19bwnsduwpZbSsJFJ4oGmrtMt+tf5nySMVmaPQ8+g+JStv7kYwTv9R7Ref4oZCfZNyLjPmgIHH8eg3u+zONwTL0NCsYd/RVn8lSQnVRxHNMC9vn9Wa9wayqjyPVYB2N/LHzb9Tcss/8nJtg6zxqGWa6hrIHBQOF0/XyJRjJ7Mp5UBgkRb3HNLWU+CHaeZbyuXC8QO8Pr37L36wwMPUca5Z/+AKNb8uyftqJHoHbIrr+W1yx7LY893fbHRTa68KPvpeeSH+h6lsDCr7OWnOutQmW3KnQSbALpzz/ACRfHtk=
+api: eJy9VMtu2zAQ/BVhz4ykOE7R6tQH2gIFigZ1cjKMYE2tLSYUyfCR2hX078VSzrNI0UNRHSSK2p2d3RlqAE83iUJ8b9s9NANIayKZyEt0TiuJUVlTXQVreC/IjnrkVdw7ggbs+opkBAG0w95p4k9bb5P7olpo4HhWn7w6mdfz+ZvTejZ7fTp/uy1TAAGqxy0DdDG60FQV3VqduNYROlVK21cbpSlUISp5Tb50ZgsjXwI8BWdNoMDFZnXNj5aC9MoxADSwSFJSCJuki7tgEP+kt55CmIh/stEWLeli65OzBcqYUKuf2GJBOxVtwJ5M5LotRvzLuYzjocen/Vy4FiMVnxmgOFMyJs/APcXOMpyzgXk6jB00UKFTVS5WpZxYufuUQP6WfIBmOUDy+pEAQySDJl6qdizXqbOlRnjO4zyHFIsMAgJu0Stc60mJ+/xJjw0mHaGBlnr7IlBat7ZHZbhx8ZzRjX+RyFdU5o7GuBLAGn5/cPLH/2FGAcpsbO5cRS4GWR8eC/kw8Twu67LmUFaox+wzgz29rOmTPu+tGGkXK6fzpMQ0puEg9xLQKRBToyBgkpzdcMBcCejYH80ShmGNgS68Hkfevknk99AsVw9K8tsooCNsyWeXXNMeGvgwnZ2jc+bD4Toxr9/OEas4ZbyTklz8Y+zqkYXPvi3OQcD68B/qbcs5Hn+AyPcGQIDNc8luy3sDaDTbNIk3YfL1C0anpSM=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -55,7 +55,7 @@ Update Group Picture
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"groupJid":"120363404495022854@g.us","image":"https://evolution-api.com/files/sticker.png"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Update Group Picture
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Foto del grupo actualizada exitosamente","data":{"groupJid":"120363404495022854@g.us"}}}}}}}}
 >
   
 </StatusCodes>

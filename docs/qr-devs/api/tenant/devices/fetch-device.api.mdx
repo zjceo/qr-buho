@@ -5,7 +5,7 @@ description: "Fetch Device"
 sidebar_label: "Fetch Device"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kUtPwzAQhP9KNWeTBI6+IfEQBySg5VRVyEm2xFJiu/amorL835GTlkcRJ8vemd1vxxGegrMmUICMuKqqfLQUGq8da2sgsRybhkJASuKsckfcdIsb2uuGIDAQd7aFxDsxBJziDhKlcrpsJ00ot9kBgUB+Tz5AriNG30OiY3ZBlmVkMsrwm25TUY+dLXqF87mrSbJYTk0gsFdeq7qfd/jyz5ts1dgzJFoa7L+Nxrq1g9IGKSVxTrTz/4I8Km1OGGkjoM3WTgyae4LE88v108Pi4hhRyKjkw+y9LKqiQhJwNvCgTPYZNdDfXH/NjOCDyyKmDy5dP1GLGTkeM19DOT0ZT2Pn3DcCnQ2cBTHWKtCr71PKz7uR/AFyvfkOM9/Sj0+9v10hpU9JNL2i
+api: eJx1U8Fu2zAM/ZWAZ81OurZbtVOBbEMPBba1OwXBwMhMrM6WFIkOWhj+94FyErTJ6osB+z3y8T2yh4ARW2KKCfSiB4ctgQZbgQLrQMO2o/gCCpKpqUXQPfBLyBDHtKEIg4KKkok2sPXCmNPOGprczWFYKoiUgneJklAvplN5vcU/dMZQSqDAeMfkWCAYQmMNCqR8SoLrzyX41RMZBgX0jG1oKNdGzhBbgZ6pwzz3djK3Kfhk2e48KAi1d/Ljanbz+dP11eXHi5kMychdAi1KHBkmsWEbja8EK6W1bXFDZXCbLytMdH2piqKAYXxOnfhGbOrJ6AcoaIlrX4GGDYnogFyDhhKDLauMSeVaGCKE4u4QSRcb0FAzh6TLsmdy6PiPrYZi1dW+aBBO+z5myOQhFwEFO4wWV82YwZE/JrHGrmEZjlr/bqFuVfkWrZNB1amibXxXyD1ad5Ahy2Dd2mcNliUt+Pnr9sfd5MPeIlkBmXrkzoppMZXtCj5xi3kD9mme+Pqm53E5mJ65DE1WrUbJ/d7zBWCwmXhoO/q+VFD7xALoe4n3d2yGQT6PVyBpVDaJlRXoNTaJzrofd/jVHaj/a/pLL4dT22HTCSC7dIgL9GI5KKgJK4q5+ci4NYYCv2KdHYtUOW7b96+PMAz/AKv5T28=
 sidebar_class_name: "get api-method"
 info_path: qr-devs/api/tenant/devices/qrapi-devices
 custom_edit_url: null
@@ -39,8 +39,16 @@ import Translate from "@docusaurus/Translate";
 
 Fetch Device
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"id","in":"query","schema":{"type":"integer"},"description":"Device ID"}]}
 >
   
 </ParamsDetails>
@@ -55,7 +63,7 @@ Fetch Device
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"data":{"id":1,"name":"Mi Dispositivo","phone":"51987654321","status":"connected","qrcode":"data:image/png;base64,..."}}}}}}}}
 >
   
 </StatusCodes>

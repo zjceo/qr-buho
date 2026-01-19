@@ -5,7 +5,7 @@ description: "Update Group Name"
 sidebar_label: "Update Group Name"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Uslu2zAQ/RXjnVnL7ZHHFkVPXVA7J8MoRtLYUkqRNJc0hsB/L4ZyHCRtdJCowZvhW2ZG4HPmmD66/gI9o3M2sU1yJO/N2FEanW3uo7NSi93AE8kpXTxDw7X33CWUUopC4OidjRwF8GGzkU/PsQujlynQ2Oau4xiP2ayewJDOl6g731Pi1Zfgsl99o4mhMHEaXA8N72KCgqc0QKMhPzYnATa5djV2wUcODxwi9H5GDgYaQ0o+6qaZE1uy6dfYl3WbB7c2hNcMdhWy2tYhUHigMFJrFmW3/kXfkbJJ0Oh5cm8Oym3vJhqtOKVeMzqHN4l8pdE+0SgHBQni53Nknx9p8oah56Iw2qOr/MYkJVT/hDyHuEx7v96sNyiqmjhRjbT69X/PX1C5RZ74MTXeVDFqUTJf49iD/AiF0/XmJRKo5ZKDwiDh6T3muaXId8GUIuVz5nCB3h+enZa/ojAw9Rxqir/5Ao1Py4K+2wkZgZsspP5ZVjHrtjM/vm93UGivSz65XnoC/YGqbw0ouCq0JlxrMwzZU6aTYJeZ8vwFfjIZbQ==
+api: eJytVE1v1DAQ/SvRnM0m3W4R+MSHEBISBbHtabVCk2R24+LYXn+ULtH+dzT2tqWFcqoPiWO/Gb+Z95wJPO0ShfjO9nuQE3TWRDKRp+icVh1GZU19FazhtdANNCLP4t4RSLDtFXURBNANjk4Tb229Te6T6kHCybw5fXm6aBaL12fNfP7qbPFmO0sBBIRUIiV8ZHh1jiNV1lfL4/qBhwBPwVkTKHDiedPwq6fQeeWYGEhYpq6jEDZJV7dgEM9Sx0gh4JZ3z+3Yeqp60tXWJ2cr7GJCrX5hbyu6UdEGHMlEPrnHiM/bBe7Dw5ovXY+RqvsYEDBSHCyf5mzgQhzGASTU6FSdudQpR9Wm4AP5a/IB5GqC5DVIGGJ0Qdb1FMmgid9Vf5i1abAzjfCYwUWGVMucBARco1fY6qLTXXxRa4NJc4k9jfbJRKnt7YjKcMniMaOdf5LIZ1TmlsZhLYAV/nbv6Q/PbUsBymxsrlJFTlyA3ALyoXA6mTWzhqEsxYjZcbnr/1buQUF3jox0E2unc0tE6cd0FHUF6BSIUhEIKMKCKIesBQxsAbmCaWox0KXXhwMv7xL5PcjV+l4v/joIGAh78tkLP2gPEt6X+/PigskwXCcm9dddYq1KxNuuIxf/i13/4dKvX5YXIKA9/ndG23OMx58g8lMCCLC5KdlTeW0CjWabyqUsOXn8BrQlnGs=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -55,7 +55,7 @@ Update Group Name
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"groupJid":"120363404495022854@g.us","subject":"Group Name or Subject"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Update Group Name
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Nombre del grupo actualizado exitosamente","data":{"groupJid":"120363404495022854@g.us","subject":"Group Name or Subject"}}}}}}}}
 >
   
 </StatusCodes>

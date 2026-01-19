@@ -5,7 +5,7 @@ description: "Update Group Description"
 sidebar_label: "Update Group Description"
 hide_title: true
 hide_table_of_contents: true
-api: eJx9U8tu2zAQ/BVjzqzl9shjH+ipaFA7J8MoVtLaYkKRNB9pDIH/XpBynNpBqoNErWYGszurCZ6PiUP8bPsT5ITOmsgmliM5p1VHUVnTPARrSi10A49UTvHkGBK2feAuIuecBTwHZ03gUACfVqvy6Dl0XrmiAol16joOYZ/04gWMwrxG3bueIi++e5vc4us/nwRGjoPtIeFsiBBwFAdINORUcyj4JlVy01/RAvsn9gFyOyF5DYkhRhdk00yRDZn4W/V52abBLjXh1s+mQhbrKgKBJ/KKWj33eeHP3e4p6QiJnkf7rlBqezuSMmVu4tbR0b9r5Acp82Ij7wRKLL9eA/z2TKPTDDllAWX2tvpTsZRQp1nMsw+z2sflarlCFnWWI9WADY38/wSuHF32IPJzbJyuPYm5oekczhbkFAQOZwNzQDdKO4GhJCq3mKaWAt97nXMpHxP7E+R29zr38pYFBqaefc30kU+Q+DIv74dN8VTgOhVvbxa5jO6ySHc/1xsItOcfYLR94Xj6A1HvEhCw1WXNu9YmaDKHRIeCnTXL9RdV3yV5
+api: eJy1VNtu1DAQ/ZVons0m3W4R+IlLERISAtH2abVCk3i6cXFs15e2S7RfxSfwY2ic3rbQPlE/JI49Z27nTEYIdJ4ppndObUCO0DmbyCbeovdGd5i0s/VZdJbPYtfTgLxLG08gwbVn1CUQQFc4eEN8tQ4u+09agYS9ebP/cn/RLBavD5r5/NXB4s16liMIUBS7oD17BwnHFFOlbVWgVRcIE6mq3VRrTHSJG9jyEhAoemcjRY4zbxp+7Xo6yl1HMZ5mU90Yg/gvZQ0UI6759nCK2Onfv2ylyFTrkL2rsEsZjf6JCiu60slFHMgmjq8w4bO2hpuzizvxChNVHwvs8N6VgIFS7zgH7yIX6TH1IKFGr+sSps4FXKsdWKRwQSGCXI6QgwEJfUo+yroeE1m06btW21mbezcz+I862KQ6Kk5AwAUGja2ZqLzFT4SeYjYJJCga3KOOcqvcgNpyA8TDjM7Do4l8Rm1v0tiuBLAIvt1NwYdnFrIAbU9dKVonjgOFIu4IhTh52Zs1s4ZNmaABi0YtDvQ0rTuZ3Eo50VWqvSmNElOXxmvGl4Beg5jqBAET6w88rQT0LBO5hHFsMdJJMNstH59nChuQy9Udmfy1FdATKgpFKD9oAxLeT/P34phzYnOTObe/ZpGJnBBvu458etJ2dU/JX78cHYOA9vo3NjjFmICXIMpTAghwpaIiuHI2gkG7ztNQTz55/QGbBb16
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -55,7 +55,7 @@ Update Group Description
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"groupJid":"120363404495022854@g.us","description":"Test in group created by gateway"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Update Group Description
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Descripción del grupo actualizada exitosamente","data":{"groupJid":"120363404495022854@g.us","description":"Test in group created by gateway"}}}}}}}}
 >
   
 </StatusCodes>

@@ -5,7 +5,7 @@ description: "Fetch Invite Code"
 sidebar_label: "Fetch Invite Code"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzqzl5shjgzTooZfEPRlGQUlriSlF0ny4MQT+e7GU4yAprANFLobD2ZmdEeiYKaZvrj9DzuicTWQTb5X3RncqaWebl+gs12I30qR4l86eIOHaF+oSSilFIFD0zkaKDLjbbPjXU+yC9swCiefcdRTjIZvVGxh88yPqO6VuXP2wJ51ode96gsBEaXQ9JAZKEPAqjZBolNfNEFz2ja7wplvgkcKJQoTczcjBQGJMyUfZNHMiq2z6rfuybvPo1kbhs4BthayeKwkETipo1Zqlsev9pb2DyiZBoqfJ3STKbe8mpS0bJT4rOoabQn4qbd9klL0A5/D0ntjDq5q8Ici5CGh7cFWfTlzCI9vC4inEhe3rerPeoAh4F9OkaqJWTXTD8g9Sroknek2NN7UZsXQyX+LYQXkNgeHy8hIJBGooe4HRxcSweW5VpF/BlMLlY6Zwhtzt353mUxEYSfUUaop/6AyJ+2U+v2xZDMNNZlH/zSqbdR2Zx4ctBNrLiE8sRiKovxB1lYCAq33WgGtthlF2yGpg7ELJ3z94TRhT
+api: eJx1U11v2zAM/CsBnzZAiN003Yee9tG1a4uhw5piGIJgYGwmVmdbikSlDQz/90Fy4i1J6xcBxvF45B0bMGixIibrQE4bqLEikLC02ptrlYMAVYOElSe7AQGWVl5ZykGy9STAZQVVCLIB3phQ6NiqegmtgJxcZpVhpQPBZSAcXF+dQzsLNM7o2pELlaM0Dc8+/s5nGTm38OVgBwYBma6Zag5wNKZUGQZ48uBCTXOsRs8fKGMQQE9YmZJiH+QI6UeUcDJKT9+cjtPx+P1ZOhq9Oxt/WA69i8OvFdNnnQe2G317//X84u3P2/TT4/fRr5t0vJik0Hbf4cQXxFkxuIoEg8ggoCIudOi4pKDKIBcgIUGjkign6folWQd3ZNc7Y7wtQULBbJxMkoapxpp/q7wdzn2hhyXCoYBJhAzuIgkIWKNVOC+7pff13eoX6EsGCTlV+kUiP891haoOE4tDRSv7opBvqOqdjOC+qhc6alAcLOmyEQSSdV3FyTAdpiFERjuuMJq7TeZza91r15vP9MSJKaNg0alttiufAhoFostAb3MMWE4wE1BoxwHWNHN0dG/Ltg2/uzMIduTKhV3mIBdYOjrS0CcVXv3Y3szrwb8jEM+L/EOb/eNbY+kDLO5tZyDI6awVUBDmZKOaru5jlpHh/6qObiSw9Bm8/DKBtv0LRExZtg==
 sidebar_class_name: "get api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -48,14 +48,14 @@ Fetch Invite Code
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"groupJid","in":"query","required":true,"schema":{"type":"string"},"description":"Group JID"}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={undefined}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Fetch Invite Code
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":{"groupJid":"120363404495022854@g.us","inviteCode":"KoOUHDF7WO0BwP2YK04fT0"}}}}}}}}
 >
   
 </StatusCodes>

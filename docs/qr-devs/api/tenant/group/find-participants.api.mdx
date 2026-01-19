@@ -5,7 +5,7 @@ description: "Find Participants"
 sidebar_label: "Find Participants"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzqzl9shjizSnAEXjngyjWElriylF0nykMQT+e7GS48ApooNELWaHMzs7IfKpcMpffX+GntB5l9llOVII1nSUjXfNU/JOaqkbeCQ55XNgaPj2ibuMWmtViJyCd4mTAL5sNvLpOXXRBGGBxmPpOk7pUOzqFQzpvEV9N65f/aCYTWcCuZygMHIefA+NI2coBMoDNBoKpjlGX0ITbvGJ4zPHBL2bUKKFxpBzSLpppsyOXP5t+rpuy+DXlvBewXaGrB5nEig8UzTU2sXZtX/xd6BiMzR6Hv2HRKXt/UjGyaTUe0Wn+KGQBzLuVUbdK0gQP98iu3uhMViGnqqCcQc/6zNZSriXuYh4jmlh+7zerDeoCsGnPNIcqaORP5j5jZRr5JlfchPsbEYtTqZLHjtQMFA4Xm6+yWSvMPiUBTVNLSX+FW2tUj4Vjmfo3f5t0PJXFQamnuMc4h8+Q+Pbsp+ftqJF4LaIpv92VWZ1XZn7uy0U2suKj76Xlkh/oea3BhT8bHPOd65NsOSOhY6CXSjl+QfSgRqC
+api: eJx1U12L2zAQ/Cthn1oQtvNVen66QtujB4XSuz6FUDb2JtbVlhVplV4w/u9l5SS9JHd6MZjZ0WhmtgOLDhtich7yRQcGG4IcNq4N9l6XoEAbyGEbyO1BgaNt0I5KyNkFUuCLihqEvAPeWxn07LTZQK+gJF84bVm3QnAnhKP7b5+hXwqNt63x5GVykmXyOcc/hKIg79ehHh3BoKBoDZNhgaO1tS5Q4OmTl5nuWk27eqKCQQE9Y2NrivcgR8jpiTmMJ9n0w3SWzWY382wy+Tif3W6S4EGJO6wLbdHw4E/Ez+fT8U12OLc++Vshe7Q2MSSXYdmIaWusPfXLfjiXhnzVphz9eEmvoCGuWrlgE3kscgU5pGh1GtWm9hzvye2OwQVXQw4Vs/V5mnZMBg3/1mWfrELVJjXCpYLHCBk9RBJQsEOncVUPoZzmh2jWGGqGHEpq2jeJwqpsG9QG5LmXirbuTSHfUZujDGmHNus2atAskQ3dEYHk/DAxTrIkk5LZ1nODMfxDc1/z9ey6UzmYnjm1dRSsBrXdwfMFoNWgho5c1mCpoGo9C6rrVujpl6v7Xn4PWyJplNqLleWhBVcSTkWGdz8PK/V+9H9H1Osa/9D+fDd3WAeBRduO+UG+WPYKKsKSXFQzzH0qCrL8YupqhYTl1MG7L4/Q9/8AlehmgQ==
 sidebar_class_name: "get api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -48,14 +48,14 @@ Find Participants
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"groupJid","in":"query","required":true,"schema":{"type":"string"},"description":"Group JID"}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={undefined}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Find Participants
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":{"groupJid":"120363404495022854@g.us","participants":[{"id":"5531900000000@s.whatsapp.net","admin":false}]}}}}}}}}
 >
   
 </StatusCodes>

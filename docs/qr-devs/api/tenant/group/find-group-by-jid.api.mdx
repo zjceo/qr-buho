@@ -5,7 +5,7 @@ description: "Find Group by Jid"
 sidebar_label: "Find Group by Jid"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVhzqzl9shjizRAgF4a92QYBSWtLaYUSfORRhD478VSjoOksA4UuZwdzu7sgkDnTDF9dcMMuaB3NpFNvFXeG92rpJ1tn6KzHIv9SJPiXZo9QcJ1T9QnlFKKQKDonY0UGfBlu+XfQLEP2jMLJB5z31OMx2yaVzA48z3qu7ZDcx9c9k03Nw96gMBEaXQDJE6UIOBVGiHRKq/bEyPbo7aMixSeKUTI/YIcDCTGlHyUbbskssqm33oomy6PbmMUPr68q5DmsZJA4FkFrTqzVnTNX+s6qmwSJAaa3E2i3A1uUtpyh8RHRedwU8gPpe2rjHIQYAN+vll196ImbwhyKQLaHl3VpxOHUDvH4inEle3zZrvZogh4F9OkqpVWTXSj1++kXK1O9JJab2oxYq1kufiwh/IaAqfLy9WLg8DoYuLbZelUpF/BlMLhc6YwQ+4Pbw3mUxEYSQ0Uqnl/aIbEt3UeP+1YA8NNZi3/zSb36Doi93c7CHSXkZ7cwClB/YWoqwQEXC2v+lpjC4yyp6xOjF0p+fsHnCUSOg==
+api: eJx1U8Fu2zAM/RWDpw0QYsdJutanDdhWrMAua3YKgoGxmVidLakSFTQw/O+DpCRdm1YXG/Z75NPj4wAGLfbEZB1UqwEU9gQV7Kz25k42IEAqqODRkz2AAEuPXlpqoGLrSYCrW+oRqgH4YALRsZVqB6OAhlxtpWGpQ4HbUDC7+/EVxnUo44xWjlxglkURHi/x976uybmt77ITGATUWjEpDnA0ppM1Bnj+4AJnuFSjNw9UMwigJ+xNR7EPcoTIBiqYlsXsajYv5vObRVGW14v5593EOxDgfOJWsCTHWVHC6yvp+IIdiGAiy1oaVBxshMViNr0pjgfWAmpLmGjTcjZfXH26vinGdF6X/S5VkyW7NocszaAnbnXQuyOO7biFCnI0Mo+TyrdSBZwjuz9N0tsOKmiZjavyfGBSqPiPbMbJxrd60uHFhZYRkt3HIiBgj1bipktTOvPTrLbou2BOQ71+t5DfNLpHqSBc87WiR/uukJ8o1UlGiItUWx01SA4zTGEKAsm6xJhOikkRUme04x5jGo5RfsvPF+3OaWF64tx0UbBIaoej1ytAI0GkvQAB0e+1gFY7Dn+HYYOOfttuHMPntC5hCo10wcIGqi12ji5anxMNH34dd+tj9rws4m1tf+nwckn32PkAi3ad5gbVaj0KaAkbslFN4n2pazL8H+til0KVc+Zuvy1hHP8Bh3lkBw==
 sidebar_class_name: "get api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -48,14 +48,14 @@ Find Group by Jid
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"groupJid","in":"query","required":true,"schema":{"type":"string"},"description":"Group JID"}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={undefined}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Find Group by Jid
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":{"id":"120363404495022854@g.us","subject":"Test 02","description":"optional","participants":["5531900000000"],"creation":1234567890}}}}}}}}
 >
   
 </StatusCodes>

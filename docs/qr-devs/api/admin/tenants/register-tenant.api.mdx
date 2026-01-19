@@ -5,7 +5,7 @@ description: "Register Tenant"
 sidebar_label: "Register Tenant"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1UsFu2zAM/ZXgndU421G3bdhhh2Fdkp2CYKBtNlZnS4oktw0M/ftA2UvRrtVFEkU+Pr3HCYHPI8f02bUX6AmNs4ltkiN535uGknG2uo/OSiw2HQ8kp3TxDA1X33OTkHPOCoGjdzZylISPm41sLccmGC8o0NiNTcMxQrJfvmz5ZGLisNqzJZugMHDqXAsN76LcPaUOGhV5U6WSVIWlCAqRwwOHCH2YMIYeGl1KPuqqOod1PXZu3RNeN/1Oxq52pRJZvS6c5i6/TZvfRZjZ/sNQeKBgqO5nCa71sxB3NPYJGi0P7l2gsW7dQMaKpEcFEX77bNHXJxp8z9BTVjD2zpU2JkkIP7efbr+tbhYFo7DhEGf4D+vNeoOsipgDFTMtDfym8i+YXa1O/JQq3xduapZqWkw5gLyBWj4MmYTFmKNCJ/bpA6appsi/Qp+zhM8jhwv04fgsmtyyQsfUcihO/uELNL7MQ3mzFyKS3o9C6L8BFcGuU3P7Y7eHQr0M9uBaqQn0KPToERpQcOWTxawSm9CTPY10ktwZU9Zf6owVKg==
+api: eJy9VE1P20AQ/SvRO2/ihCSU+FTacuihKgV6iiI0tge81LtrdtdAZPm/V2NbfIqeUPdie3Y+3rw34xaebxsO8Ysr9khb5M5GtlFeqa4rnVPUziY3wVmxhbxkQ/IW9zUjhctuOI9Q4AcydcVyZcnI1YmpPQf6xsZBoXCGtEWKgo2TIzGGdIUUVBhtP/PgP8udgUJNIdw7XyDF4mC5Wh+KrSJ7qQuki06OgudQOxs4SNmD+VweBYfc61pgI8V5k+ccAtSHdGY4BLqW2wu2ZOPE87UO0VPhJvygowtk2EaWfin22QQulouj1fpoczTNaJVNV9l6M802y4MpHRbL1aflPM/Xa6iPIK7rRmpe0nDW42Q/GXBDwXAsnWCrXYg937FEioRqncTeKfFjEBQC+zv2Aem2ReOldBljHdIkufWzrCndrCK8LvqDtJ2c95Ho1OvAdqhyqYvu3Qwjy2MOhTvymrJq0PsxflD9ipoqjjS9m6jJRjq7rtspiPhnTwtw8n9nWEHbK9e3oqOUxa+z49Pvk+mokkytsD60sJjNZ3N0qhfMkH2G8q26L7p/HOnIDzGpq75/NcjRjsJvQbWGGkmFrNYo/k6hlBFJt2jbjAL/9lXXifm2Yb9Hut09CSNfnULJVLDvp+UP75Hi67B80wsBIu5VI4DeLKKMyRBxnOdcx3/67p5N8enP8wsoZONvzLhCYjzdSyt0jxRQcD0h/fD0thYV2etm2Oghp5y/h1e4Cw==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/admin/tenants/qrapi-tenants
 custom_edit_url: null
@@ -55,7 +55,7 @@ Register Tenant
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"name":"EmpresaDemo","domain":"demooooo","email":"admin@empresa.com","password":"123456","plan_id":1}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Register Tenant
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"message":"Tenant registrado exitosamente","data":{"id":"31845898-ba4b-4b59-b932-a6d34730cc55","name":"EmpresaDemo","domain":"demooooo","email":"admin@empresa.com"}}}}}}}}
 >
   
 </StatusCodes>

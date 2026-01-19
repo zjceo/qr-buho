@@ -5,7 +5,7 @@ description: "Find Messages"
 sidebar_label: "Find Messages"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kc1qwzAQhF8lzFnYbo+6FnoLLSQ9mVBka10JZMmR5NAg9O5FdtKf0JzEitndmW8TPIXJ2UABPOGxacojKfReT1E7C47d3PcUwjCbzVWMnNmN6llbudlSCOKDAhhGispJcEwuRDBMIipw1L0SsR5XXT1oK8EQyJ/IB/A2YfYGHCrGKfC6TpGssPFdy1x1s3KVEbjdvF8km90yBAwn4bXozJrou3/NNYjZRHBIGt3dQXMn3Si0Rc6Z3To6+rtGtkLbq418YNB2cIsHHQ2B40mJQqJEXRseqqZqkNnCaBS2iK0Y6R+cfzYlxPNUVJE+Yz2ZxStbjaYL6Rb9uu7CGgwL7QODKhfhLVLqRKA3b3Iu38eZ/Bm8PfwgLFX+dcvXl90eOX8BrsXBMw==
+api: eJytVF1v0zAU/SvTeTZNl24t8xOs7YSQJhAbT1WF3OR2yXBsz3b2oSj/HV2n3dhgCAnykDjO/Tj3nON08HTTUointnyA7FBYE8lEXirndF2oWFuTXQdreC8UFTWKV/HBESTs5pqKCAG6V43TxJ/uKvJp8Z1STU+NjfSxLiFxmE/ehdFdpWJQzo0MRfTDJeApOGsCBU7Kx2N+lBQKXzsGAYmLtigohG2rD/bBEP8Fc6miglz9LWaBrbfNOUFG35JAipssT8dHi/n0ZHEyezs5Xszm8+nZYT6bTRf58Ww6PTud5/nRMkcv0FAI6op2lN+SD2o34wfS2qLv13tanlNwVpvy4HzIDuBCsbLc3dnAuJyKFSSyolIx23XJtrUpIRDIc6c0Z+s1JKoYXZBZ1kUyysRvddmPNm1lR1rhZefLFHJwkYpA4Fb5Wm30INdj/iDaVrU6QqKkxr5aqN2UtlG1YQeIl4hu/KtAzlVt9jD6tQAL/eXJxst/caJAbbY2TVRHLoJ5pZhXJm5ofzgaj8asITPeqOQxoxr6jTjPcD/6L9J9zJxOk4th7G6n2wrF0G7vD4Gk3VqgYn3lCl23UYG+et33vH3Tkn+AXK2fBOG3XqAiVZJ/MjXmwzl5c8kwOFy3DOeXM8NiDBnvi4Jc/GPs+icLfv50cQmBze5f0tiSc7y6g0h3CQjYREcyTdrroJW5atNhwFCTrx9WQY+l
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Find Messages
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Find Messages
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"where":{"key":{"remoteJid":"123@s.whatsapp.net"}}}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Find Messages
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":[{"key":{"remoteJid":"123@s.whatsapp.net","fromMe":true,"id":"3EB04DC69D97835D7CC6F12776D25766FBC224E2"},"message":{"conversation":"Hello"}}]}}}}}}}
 >
   
 </StatusCodes>

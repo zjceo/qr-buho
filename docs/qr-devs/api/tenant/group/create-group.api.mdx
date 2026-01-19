@@ -5,7 +5,7 @@ description: "Create Group"
 sidebar_label: "Create Group"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzqzl9shji6KnokXtngyjWElriylF0nykMQT9e7GU7SAJooNELWaHszM7IfK5cMqffX+BntB5l9llOVII1nSUjXfNQ/JOaqkbeCQ55UtgaPj2gbuMeZ5nhcgpeJc4CeDTZiOfnlMXTRAWaGxL13FKx2JXNzCk8yXqS2TKvPoWfQlQGDkPvodG8ClDIVAeoNFQMM1JME1XG6CQOD5yTND7CSVaaAw5h6SbZsrsyOU/pp/XbRn82hJe37urkNW2kkDhkaKh1i7z3PuXqY5UbIZGz6N/l6i0vR/JOPFHvVZ0ju8K+U7G3WTMBwWx/9dzUF+faAyWoadZwbijr/pMlhJurokPC9vH9Wa9wayqfyPVIB2N/NbpFyruGWd+yk2wdQ61DDFdQ9iDgoHC6UpwDeKgMEhWeo9painx72jnWcrnwvECvT88uyt/s8LA1HOsyf3li2hbVvHDTlQI3BZR82YtxaD7ivz8sd1Bob2u8+h76Yn0D6q+NaDg64Q11VqbYMmdCp0Eu3DK8x9iAhIO
+api: eJy9VNuO0zAQ/ZVqnk2T3hCbJy5C+4RAtDxVFZok08aLY7u+LK2i/DsaJ7tLt1okJIQfEnsylzNzjtOBo2MkH96b+gxFB5XRgXTgLVqrZIVBGp3deaPZ5quGWuRdOFuCAkx5R1UAAXTC1ipKTnEwFrAhHyb5HATU5CsnLSfjqLRBBQIsuiAraVEHD8UWVqvF7CYfF4hn513PS4Ajb4325LnePM/5dVliHauKvN9HNXlwBvFP2mvJezzw11sXrZlUjrA2EzrJYDy2pANXqjGkRLKGAmbzfPF6scyXy5tVPp+/WS3fHqbRg/ibWfX92Pzl9w+OMNDk1ploQUBLoTFc0xof0nxDAwVkaGV2YJ+sSgFcm9w9OZ56B9EpKKAJwfoiy7pAGnX4Lut+WsbGTBVe4dokl8k6JQEB9+gklmqg5DF+IGaPUXGPNbXmxUSxrE2LUnOj4jmio3sRyCeU+gFGvxPAZH59UvXH/yRMAVLvTWpeBjXIY6CEhzykn03zaQ69SOS0mDSnsaVrGi9gPcox0ClkVqUhiWFC3cjwFtBKEHAYE4ws7wQ0LIRiC11XoqdvTvU9m4+R3BmK7e6JOj71AhrCmlySxQ86M7bh1rzaMAp2V5HRXN0gpm2IeFdVZMMffXe/afXL5/UGBJTjT6g1Ncc4/AkiPQsAMXKT5JVsHSjUhzhcxSEnr19JB5w9
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -55,7 +55,7 @@ Create Group
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"subject":"Test 02","description":"optional","participants":["5531900000000","5531900000000"]}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Create Group
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Grupo creado exitosamente","data":{"id":"120363404495022854@g.us","subject":"Test 02","description":"optional"}}}}}}}}
 >
   
 </StatusCodes>

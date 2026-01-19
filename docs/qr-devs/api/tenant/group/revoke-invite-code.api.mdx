@@ -5,7 +5,7 @@ description: "Revoke Invite Code"
 sidebar_label: "Revoke Invite Code"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzqzl9shjgyDooZfEPRlGQUlriQlF0nw4MQT+e7GU4yApzAupxexoZmdnBDpmiumn68+QMzpnE9nET+W90Z1K2tnmOTrLtdiNNCl+pbMnSLj2mbqEUkoRCBS9s5EiA35sNnz1FLugPbNA4il3HcV4yGb1DgZ3fkY90sm90OqXPelEqzvXEwQmSqPrITFQgoBXaYREo7xuhuCyb3SFN6E2QyBSOFGIkLsZORhIjCn5KJtmTmSVTX91X9ZtHt3aKHzVsK2Q1VMlgcBJBa1as3i79i8ODyqbBImeJneTKLe9m5S2PCvxVdEx3BTyW2n7LqPsBTiKx4/Q7t/U5A1BzkVA24Or+nTiEh54MCyeQlzYvq836w2KgHcxTaqGatVEt6b+Scs19URvqfGmuhGLlfmSyA7KawgMl18vqYCXo+ayFxhdTAyc51ZF+hNMKVw+ZgpnyN3+Y9j8VQRGUj2FGuQLnSFxt2zpty3LYbjJLOu/jeV5Xffm4X4Lgfay6BP7kwjqlbWpV0hAwFWnNeNam2GUHbIaGLtQ8vkHjNwbOQ==
+api: eJx1U8tu2zAQ/BVhTy1AWIrjFK1OLdIiSIBekvRkGMFaXFtMJJIhV0YMQV+VT8iPFUvZbp2HLgLEneFoZrYHjwFbYgoRynkPFluCEtbBdf7KaFBgLJTw2FHYgoJAj50JpKHk0JGCWNXUIpQ98NYLMHIwdg2DAk2xCsazcUJwIYTZ1eVPGBZCE72zkaIgp0Uhr+P5m66qKMZV12T7YVBQOctkWcbR+8ZUKOP5fRRM/1aNW95TxaCAnrD1DclRSzHiWk7PX561WbtMU2bsxjBW5uXZZoE2rkLtMnoy7CK2ZFku18iJ++BNCSfT4vTL6ayYzb6dFdPp17PZ9/WkizCMz2sTrmnjHii7lMsoO3daaFvi2gnZmkSpR66hhBy9ydNNedJGeUhgUBApbPZxdaGBEmpmH8s875ksWr4zepgsu9pNGoTXGm7TSHaTSEDBBoPBZTNGccCPgaywaxhK0NS6D4m6pXYtGis/rV4regwfCvmNxu5lSCeMXbmkwbAENTZGBFKII+JkUkwKqZZ3kVtMke/6+q6zR/cdOsH0xLlvkmI1yu13rs8BvQE1JpyqL3Sp9sn7hYLaRZbBvl9ipD+hGQb5PO6HJKJNFDs1lCtsIr1RcagwfLreLdPn7N92qPdlPtD2eCs32HQylqzbZwjlfDEoqAk1haRmxP2oKvL8H+rN8gjLoYgXv25hGP4CdqdnVg==
 sidebar_class_name: "get api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -48,14 +48,14 @@ Revoke Invite Code
 </Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"groupJid","in":"query","required":true,"schema":{"type":"string"},"description":"Group JID"}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={undefined}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Revoke Invite Code
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Código de invitación revocado exitosamente","data":{"groupJid":"120363404495022854@g.us"}}}}}}}}
 >
   
 </StatusCodes>

@@ -5,7 +5,7 @@ description: "Button"
 sidebar_label: "Button"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Uslu2zAQ/RXjnVnL7ZHHFD0GCWL3ZBgFJY4jJdzMJY0h8N+LoRKnSRAeRGowy1tmRqRToZSvvD5Dzhi8y+QyP1UIZhpUnrzrHpJ3HEvDSFbxK58DQcL3DzRk1FqrQKQUvEuUOOHHZsOXpjTEKXAXSGzLMFBKx2JWr8ngyvdZVyVn7yBgKY9eQyL4lCEQVB4h0VlKSd1Tl8hpCCSKTxQT5H5GiQYSY84hya6bMznl8p9J13VfRr82Ch+n7VrKatuaQOBJxUn1ZmFxqV+4HFUxGRKarP+yUem1t2pyrIr4iOgUvwRyrSb3CqMeBFj0uzd7fj0rGwxBzlVgckff8E2ZQ9iS06vrRRbmQDEtTb+vN+sNqmgSWtVcdMrS/zK/g3GxNtNz7oJpRMTCYn5xYA97GdU8OAiMbJHcY557leh3NLVy+FQoniH3hzdh+a8KjKQ0xWbaI50h8XPZvW87ns/ppjCOT3vI2lw24/Zmu4NA/7K/1muuieovRPtKQMA3bs3QFpthlLsvTEBi6cnnH4u0DS8=
+api: eJzVVE1v2zAM/SsBz1o+WiRtdVrTpsMGpCua7BQEg2wztTtbUiWqTWD4vw+U3SRd0Z12mQ+2LNLU43uPrsHhU0BPU5PtQNaQGk2oiZfK2rJIFRVGDx690bzn0xwrxSvaWQQJJnnElEAAblVlS+SQDlWCDiSMRxfj8eT8ZHw2AQFUEMdhyc/eNBAZDQIy9KkrLB8DEq4Pb4eUjTEUC97ExSGQxIUHudoDcmjLHZctvC3VbolbAgn36K3xpEBAkYGE0ckpNOuGLwGOg9qjZ/AnwyE/3qJahDRF7zeh7L0mg/gnXFXovXrg6By1V4/YQ/1cqMz0cFuQ8apCTXxYpijW+oVRJ4eVIfwWmzmi+bPvv+SKvLK2r5HP2jhTzREkuYBd86ez6fDm+mZ0OZ1cXc7OR2cXp8PJBTQCPCkKHiTczW6vv95+gabpOHrLx16ACik3XJPZBQFWUQ4SBl1bA486AwEe3TO6VqfgSpCQE1kvB4OaUCtNP4us6SchN/1SvfPEMqb0FrEICHhWrlBJ2eq1/75VbaNCyYJnWJkPC4UkM5UqNLcn/kT05D4EMleFfoXRrAWw0veH+Zn9jyMgoNAbE5nswC1QZ71550sBLFwLbNQf9odsE65TqWhyrSo8NsSbVvaICLc0sGWkXLR8151XVvsRYJvoDNYCcjaTXEFdJ8rjD1c2DW8/BXQ7kKv1wQL81gjIUWXMzqqbD7hqR/PTks/n9DIwjndjyvK3X1ymKVr6a+76yO933xdLZr/7bVYmi8yrFxDxLgEEmMhDtGncq6FU+iG0897W5Os3ItjckQ==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/send_message/send-message
 custom_edit_url: null
@@ -55,7 +55,7 @@ Button
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"number":"51955682576","title":"Title Button","description":"Description Button","footer":"Footer Button","buttons":[{"type":"reply","displayText":"Resposta","id":"123"}]}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Button
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Mensaje enviado exitosamente","data":{"key":{"remoteJid":"51955682576@s.whatsapp.net","fromMe":true,"id":"3EB0FDF1AB6CAE81793069"},"status":"PENDING"}}}}}}}}
 >
   
 </StatusCodes>

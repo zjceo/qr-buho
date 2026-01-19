@@ -5,7 +5,7 @@ description: "Find group by invited code"
 sidebar_label: "Find group by invited code"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFUstu2zAQ/BVhzqzl9shji7anokHsngyjoKS1xZQiaT7cGAL/vVjKcZAUQXgQqcXsYHZmZwQ6ZYrpsxsukDN6ZxPZxE/lvdG9StrZ9iE6y7XYjzQpfqWLJ0i47oH6hFJKEQgUvbORIgM+rdd8DRT7oD2zQGKT+55iPGTTPIHBnS9R37QdmmNw2TfdpdH2rBMNTe8GgsBEaXQDJLyLCQJepRESrfK6rT3t0tBe8ZHCmUKE3M3IwUBiTMlH2bZzIqts+q2Hsury6FZG4bWUbYU0m0oCgbMKWnVmGfHWvwx6UNkkSAw0uTeJcje4SWnLlonXik7hTSE/lLZPMspegBO5f87u66OavCHIuQhoe3BVn05cwne2hcVTiAvbx9V6tUYR1cRJ1Wytmug9819oui1BosfUelOnEstI8zWXHZTXEDheJSx8EKiEe4GRU5Q7zHOnIv0KphQunzKFC+Ru/2w5/xWBkdRAocb5hy6Q+LKs7Icti2G4ySzqv/Vl127Lc/dzs4VAd137idVIBPUXon4lIODqoDXqWpthlD1mdWTswsnnH+mfIEU=
+api: eJytVF1v0zAU/SvRfTZNlnV8+Ak2GIgJdVo7IVRVyEluG4/Edv2xrYry39G1u40NDYREHhLHOff6nHOPMoDFbUDnj3WzAz5ArZVH5WkpjOlkLbzUKr9yWtGeq1vsBa38ziBw0NUV1h4Y4K3oTYf0Sapr6fFENwQ407PLT+9PX32dFcc35+W3s2K6XhQw0sXAojNaOXRUVxYFPRp0tZWGzgUO81DX6Nw6dNkdGNh/odkIHyEbq4P5LBvgcFAWhy8Pp8V0+uaoKMvXR9O3m0lwwMCF1IHDAp3PijIpIA2P+Z5K1WSxZVbtsmRFk9VkBoMefavpIKMdsTHCt8AhF0bmsSZPBfke79Beo3XAlwME2wGH1nvjeJ4PHpVQ/rtsxkkVWj3pBDylsoiQbB6bAINrYaWoumT2fX2yfC1CR+oa7PWzjULV6F5IRdrZU0Zb+yyRL0KqOxrjigGN6eIhdx/+MToMpFrrKEJ6qoOP5B0pROvSkQeTYhKh5HQvYiqU6PFvE3pE/D4+Hm99broonSXdw354SxBGAkspArZXECPaIKwYtDRqvoRhqITDS9uNI21vA9od8OXqYS70NjJoUTRo48x/4A44nKSwv1gQGYJ3gUj9FnyaSap4V9do/B+xq1/SeD6bL4BBtf8H9Ml+K26AxTsHYKCjKTE7cW+ATqhNEBvCpp50/QTEpXa3
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -55,7 +55,7 @@ Find group by invited code
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"inviteCode":"KoOUHDF7WO0BwP2YK04fT0"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Find group by invited code
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":{"groupJid":"120363404495022854@g.us","subject":"Test 02"}}}}}}}}
 >
   
 </StatusCodes>

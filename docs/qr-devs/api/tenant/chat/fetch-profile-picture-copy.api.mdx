@@ -5,7 +5,7 @@ description: "Fetch Profile Picture Copy"
 sidebar_label: "Fetch Profile Picture Copy"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFU8tu2zAQ/BVhzozl9shjg/ZW1Kjdk2EUFLWOmFIkzUcaQ+C/Fys5DuIiiA4StZhdzWM1IdKpUMpffH+GnKC9y+QyH1UI1miVjXftY/KOa0kPNCo+5XMgSPjukXRGrbUKRErBu0SJAZ/Xa370lHQ0gadAYlu0ppSOxTYvYHDnW9Q3ynpoNtEfjaVmY3QukZp7H84QGCkPvodE8ClDIKg8QKLVg8ot01c6t2HpvQtLLwQSxSeKCXI/oUQLiSHnkGTbTpmccvm36euqK4NfWYVbRrsZ0mznIRB4UtGozi5Kr/2L3qMqNkOip9G/O6h0vR+VceycuGV0iu8S+a6Me6FRDwIczM/XCL8+qzFYgpyqgHFHP/MzmUu4HxQbxjYswz6t1qs1qpitHNWcsFMjfRTBG0rXVcj0nNtgZ1FiUTRd0tlDL9++5MOx3SR0EBg4ULnHNHUq0a9oa+XyqVA8Q+4Pr7bzWxUYSPUU50j/0JkVLtt7t2NGDLeFmf23yezcdY82P7Y7CHSXP2D0PfdE9RdivktAwM9q57jn2gSr3ENRD4xdZvL1Dw1+JTk=
+api: eJytVNtu00AQ/ZVonrd2WikF9gmo4A0RkfIURWi8nsQb9pa9tI2s/DsaO70kqCAk9sFer8/MnDln7B4i7Qql/NG3e5A9KO8yucxbDMFohVl7V2+Td3yWVEcWeZf3gUCCb7akMgigB7TBEL9yxTYUQcLs8t1sdv32avbm+n2q7jvMCUOoHGU48BIQKQXvEiWOu5pO+dZSUlEHrgsSFkUpSmldzOQRDOK/0GwxD5ASDUjocg5J1rW1mxOmdVVVIMBqS8dc2uKG6m2gzdgF93HK+TNl1U3m0a+1oclcq1wiTW582HMmyp1vQULwiRkFzB1IqFWHuea+UOU6jLEXYYwFAYniHcUEcnnOuM/k0OUfuj1UTel8ZRDOGd0OkMliSAIC7jBqbMyo+1P8qP4ai8kgoSXrX01UmtZb1I4lEOeMdvFVIl9Qu0cah5UAduzb8wh++scpEqDd2g9N6MxxcNMhq8pajRUvq2k1ZSTrbXGYD4eW/ubTCe+nQcr0kOtghs7F2HZ/tHAJaqx9NJG9PbNxJaBj1+US+r7BRN+jORz4eFco7kEuV8/e8NNBQEfYsg7LHn7SnjscZ//ilhkx3BRm9tt3wL6MER+UopD/iF29GMz518UtCGiOvwTrW46JeA9iuEoAAX5QZpif4awHg25TcMPYMSevXzz4gJs=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -55,7 +55,7 @@ Fetch Profile Picture Copy
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"number":"51955682576@s.whatsapp.net"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Fetch Profile Picture Copy
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"data":{"url":"https://mmg.whatsapp.net/...","mimetype":"image/jpeg"}}}}}}}}
 >
   
 </StatusCodes>

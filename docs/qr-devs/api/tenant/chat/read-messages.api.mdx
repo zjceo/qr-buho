@@ -5,7 +5,7 @@ description: "Read Messages"
 sidebar_label: "Read Messages"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzozl9shjix6DBrF7MoxiJa4jJRQp85HGEPjvxVKOg6SNDhK1mF3OY2cEPmWO6Zs3Z+gZnXeJXZIjTZMdOkqDd81j9E5qset5JDml88TQ8O0jdwmllKIQOE7eRY4C+LrZyMdw7MIwyRRobHPXcYzHbFevYEjne9Q9k1ndcoz0wBEKI6feG2hMPiYoTJR6aDRdT6kZF1wzUni6CUwGCpHDM4cIvZ+Rg4VGn9IUddPMiR259HswZd3m3q8t4eP1uwpZbesQKDxTGKi1i6xr/yLuSNkmaBge/aeDcmv8SIMTm9RHRqfwKZFbGtwrjXJQkBTu3/L68ULjZBl6LgqDO/rKb0hSwveexCqxYRn2Zb1Zb1BUNXGkGqejkf/j9zsW16gTv6RmslWHWkTMlyj26JbrLmHI6RrHQaGX3PQe89xS5F/BliLlU+Zwht4f3jyWv6LQMxkONb8nPoucZS9vdsJF4DYLp392VGy6rsvdz+0OCu1lt0dvpCfQH6j61oCCrzprtrU2w5J7yKJCY5kpz19ZYxZj
+api: eJzFVM1u2zAMfpWAZzVOsjXJdFqaNocBwYYmOwXBwMhM7VZ/leS2geFH2lPsxQbaabt2604DpoMt0RT58eNH1xDotqKYzlx+AFmDcjaRTbxF73WpMJXOZtfRWbZFVZBB3qWDJ5DgdtekEgigBzReE38KhPmSYsQriiA3bDAu0acyBwmnw+Ho3fvT8WT6MfbvC0wRve9b4hj74MySQO5RRxLQ+s/mk/PZ+dliNJ5PF4sPi8l4ejaaLwbD2fRidjodQrNteAkIFL2zkXPWMBoM+JVTVKH0XANIWFVKUYz7SvcenUH8k5JNVy5IWJKNeE2xZzAozF3sKWdcT9OP73yghzK5iIZsImiOyF+ivCTMe0/8CTCUCsdUeBc5rcdUgIRMFZiyY+LMYLg5YeJBQKRwR6GjvgoaJBQp+SizrE5k0aZvZd70d1Xh+hrhdfp169JbtUFAwB2GEne6o/XpfkfuHiudQEJOxr0ZqNrlzmBpuVzxGtFteBPIEkv7CKPZCuCGXD6r9eI/Ck5AafeuJaRMjAHmBXJA5r1DP+wP+gNoRNs1g62ULBr6Q4NflP0ks0QPKfO6JU50rNXH3m9AdekeZSfguf9bAQULRW6grncY6WvQTcPm24rCAeRm+9xUPjUCCsKcQkvdDR24nG4mTtaMhd11xZh+mw9uaHdjphT59Fff7S9a/vJ5tQYBu+Nvx7ic7wS8B9E+JYAA13LSCq+11aDRXlXdoHUxef0Eu1ecKA==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -55,7 +55,7 @@ Read Messages
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"readMessages":[{"remoteJid":"5112345678@s.whatsapp.net","fromMe":false,"id":"AC7DADBF26C8FF9F768B2CF01A8EA581"}]}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Read Messages
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Mensajes marcados como leídos exitosamente"}}}}}}}
 >
   
 </StatusCodes>

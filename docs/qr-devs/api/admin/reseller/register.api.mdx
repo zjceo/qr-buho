@@ -5,7 +5,7 @@ description: "Register"
 sidebar_label: "Register"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1UkFu2zAQ/IoxZ8Zye+StLXrooWhiuyfDKFbSxmJCkTRJJTEE/r1YybXhFNFF1Gp2ODuzIyIfB075q29P0CMa7zK7LEcKwZqGsvGuekreSS01Hfckp3wKDA1fP3GTUUopCpFT8C5xEsDn1UpeLacmmiAs0NgMTcMpQdC3f9Z8MClzhELPufMtNIJPGQqBcgeNioKpaMhdFa/YxPGFY4LejRiihUaXc0i6qo5xWQ+dX1rC+7t+knGLzdSJot43jpkdufzHtOVDhu0E+ceh8ELRUG3nyS/98/yPNNgMjZZ7/yHRULe+J+PEyb2C+L2+JvP9jfpgGXosCsY9+ukak6WEh/WX+x+Lu8WaE1s7y+GYZv5Py9VyhaImL3uaQnTU863jN5ou2WZ+y1Wwkyo1mzSew9iBgoGCxAEJ/ky1V+gkNL3DONaU+He0pUj5OHA8Qe/2V7Pkqyh0TC3HKcFnPkHj27yDd1uRIXA7iJz/9lGMuuzK/a/NFgr1eY9730pPpFeRR6/QgIKfRpxCmmojLLnDQAfBzpzy/AWgMw7H
+api: eJy9VMtu2zAQ/BVjzozlpG+dmhY99FA0dZKTYQQraW0xFR8hqSSGoH8vVlJiJ0WKHoryIj52djk7Q3UIfNNyTJ9ctUPeoXQ2sU0yJe8bXVLSzmbX0VnZi2XNhmSWdp6RwxXXXCYo8D0Z37AcsSHdIEfFxn34uJXVvHQGCpYMPxxAwVOMdy5UyHF88ur1m7fv3h/sXpXObnQwww0OQ3oZCoGjdzZylJoni4V8Ko5l0H5CnLdlyTFC/RNahmOkrZxexpaCdrPAWx1ToMrN+F4nF8mwTQyFNnIQjK6QH6u/7UjfT9Se0lgOZThAwXCqnfTLu5iGXqUaOTLyOqM21VnYx0YOtxwi8lWHNkj5OiUf8yy7CfOird28ITyv9Y20nZ0PSPTqObBLbMmmK131L2a4GEIecijcUtBUNKNMj/hRrA21TZrov5ioLSpnSFtpz1pBNFvuTfvlP/pOQduNG3joJDXxY3l69nV2NFty5KYZ+XKIE3C+mC8EJWIZGpw23eRA0iekHw2Y+D5lvhloq1GFblJ7BfIaCqI35BlMqdYKtbgiX6HrCop8GZq+l+2blsMO+Wq9V0NWvULNVIlTVx1+8g45Po8P5ehCriHhTSvX+e3RiDdGxGlZsk9/jF0fGPfs+/kFFIrpf2NcJZhAd0KF7pADCm5ox+CYYa9DQ3bbjq9vzCnjFzc6msY=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/admin/reseller/qrapi-reseller
 custom_edit_url: null
@@ -55,7 +55,7 @@ Register
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"email":"demo9@gmail.com","name":"demo9","password":"12345678","password_confirmation":"12345678"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Register
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"message":"Usuario registrado exitosamente","user":{"id":1,"email":"demo9@gmail.com","name":"demo9"}}}}}}}}
 >
   
 </StatusCodes>

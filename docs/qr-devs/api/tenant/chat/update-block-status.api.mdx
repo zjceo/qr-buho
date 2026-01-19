@@ -5,7 +5,7 @@ description: "Update Block Status"
 sidebar_label: "Update Block Status"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kctqwzAQRX/F3LWw3S61bNelhSQrE4psT2pRWXKkcWgQ+vciO+kjkJWQuDM6cybCU5icDRQgIx7rOh89hc7ribWzkNjMXUchHGZTXMNISdykdlOvmIon47rPYsOK5wCBkXhwPSQmFxgCk+IBEtVIIagPqjpnWXVctbkMAoH8iXyAbCJmbyAxME9BVlVkssryu+5T2c6DK43CLcN2iRSbpQkETspr1Zp1tp/6dcKDmg1DoqfR3W00t70blbZIKYlboqO/C/KitL1ipL2Atge3MGg2BInnQWUbedS14KGsyxpJLJ5GZXPYqpHuiv33XwSfp5xl+uJqMguxWHHjxXmDi3MIXKxDYPW+FxjyfmSDGFsVaOdNSvn5OJM/Qzb7X5n5lv5s9u11s0VK31DnyRE=
+api: eJytVMFu1DAQ/ZVozibZVtoCPkFRjwjEbk+rFZo40yatY3vtcdslyr+jSdpdWlQOgA+JY8+M35v3nAEi7TIlPvfNHvQAxjsmxzLFEGxnkDvvqpvknawl01KPMuN9INDg6xsyDAroAftgSbZc7muKoGF58n65PHt3unx79iGV9y1ywhBKR5JQW29uQXPMNMpQECkF7xIlKXK6WMiroWRiFwQEaFhlYyilq2yLp2BQ/wVzTynhtexeJMbGFw0VtfW7TL5Awxlt90OW6aFjn7Anx3J0g4x/T1lIPyd4GRpkKs4lsFgxck6goCdufQMagk9SJyC3oKF6BF1JA9BwNddXkCjeUUygNwPkaEFDyxySrqqByaHj710zlnVufWkRXmJYTyHFaioCCu4wdljbWZZD/izOFWbLoKGh3r9aKNeN77FzIIRfItrFV4F8xs49wRi3CkTQb0e7XvyL4xR07spPjDqWIvCpRQmSxs3Hn5SLcgGjmrre4+Qlhz29KtMz9Ae3MT1wFezEX83kh0cFNwfbzSZGc4S5VdCK2noDw1Bjostox1GWd5niHvRme5RGvkYFLWEjbdgMcEt74TTfjDdrgSLhNguk326JyDJnfDSGAv8xdvuLIb9+Wa0F8uPfo/eN5ES8BzU9NYACP7Vkss+0NoBFd53n6zbXlPETylWOvw==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Update Block Status
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Update Block Status
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"number":"51955682576@s.whatsapp.net","block":true}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Update Block Status
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Estado de bloqueo actualizado exitosamente","data":{"number":"51955682576@s.whatsapp.net","block":true}}}}}}}}
 >
   
 </StatusCodes>

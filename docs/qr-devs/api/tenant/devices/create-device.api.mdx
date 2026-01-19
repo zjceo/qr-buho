@@ -5,7 +5,7 @@ description: "Create Device"
 sidebar_label: "Create Device"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/JVgzozl9shbX4ceiqaxezKMYiVtIqYUSZOUG0PgvxdLOQ6SNjpI1Gp2NY+dEfkwccoffX+CntF5l9llOVII1nSUjXfNQ/JOaqkbeCQ55VNgaPj2gbuMUkpRiJyCd4mTAN6v1/LoOXXRBJkCjc3UdZwSBP3yy6fIlPnqMx9Nx1AYOQ++h0bwKUMhUB6g0VAwTV9BqelqDxQSxyPHBL2bMUULjSHnkHTTzJkdufzL9GXVToNfWcLrX28r5GpTh0DhSNFQaxcZl/5FzB1NNkOj59G/OWhqez+ScWKLes3oEN8k8o2Me6JR9gri+u1zPl8eaQyWoeeiYNydr/xMlhJ+3H64+Xp1fTYwiQyOaZn7brVerVFU9XKkmqSjkf9j+wtCl5QzP+Ym2CpJLXrmcyI7UDC18em/51T2CoNEp3eY55YS/4y2FCkfJo4n6N3+2Wp5KwoDU8+xxvibT0JvWcfrrfAQuJ2Ezz+rKW5dNubm+2YLhfa80qPvpSfSH6h614CCrxprxLU2w5K7n+hesMtMuf4Cl64Ryg==
+api: eJytVE1v2zAM/SsBz2qcdOs+dOvWHXYo1jXdKQgGRmJrdbakSHSWwMh/HyinbZqhAzZMB1sW+chHPso9JFp1lPlDsFvQPZjgmTzLFmNsnEF2wVf3OXg5y6amFmXH20igISzvyTAooA22sSExeWzFdOlGFy7HkB27dQAFsQ5eDGfT9+/evjl7/ep0CjtZChLlGHymLPjTyURelrJJLkp+0DDrjKGcQf0Xii3ljHdiPaA4MonQhhFtHIeMLXkmUGCRSzhnQU/VX1WnIDNyl0ELa0+GyQ4lS9HPC/yYCJlGF7R2RtK2xHWwoCGGLOwjcg0aKoyussUpV6ZgJA2lNaUMet5DlxrQUDPHrKuqZ/Lo+buzu/Gyq8O4QThOfVNcRrMSBBSsMTlcNoMaj/hBk1vsGgYNltrwYqBuaUOLzkut6pjRKr1I5BKdf6CxWygQTa+fBvTTP86YAudvQynGseDh6/X51efRyb7bMlXSvoHEdDwZTwQkjW/RH6Q71ugZ+8eBY9pwFZtSvxqK7/fyzQGjK8CHvHsJFwpq0VnPoe+XmOlbanY7OV51lLag54snXeRrp6AmtJSK5j9oK/SGm3FyIzzEvemEz2+3RDQZEOfGUOQ/+i4ORvHqy+wGFCz3P4s2WMEk/AmqPDWAglD6UWannPXQoL/rhus2xJT1CzB7gvM=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/devices/qrapi-devices
 custom_edit_url: null
@@ -55,7 +55,7 @@ Create Device
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"name":"Mi Dispositivo","phone":"51987654321"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Create Device
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"message":"Dispositivo creado exitosamente","data":{"id":1,"name":"Mi Dispositivo","phone":"51987654321","status":"connected"}}}}}}}}
 >
   
 </StatusCodes>

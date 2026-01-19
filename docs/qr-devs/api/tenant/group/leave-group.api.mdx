@@ -5,7 +5,7 @@ description: "Leave Group"
 sidebar_label: "Leave Group"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Ustu2zAQ/BVjzqzl9shji6KXBi1q92QYxVpaW0wpkubDjSHw34uVbAdJEB0kajE7nJ3ZEZFPhVP+7LsL9IjWu8wuy5FCsKalbLxrHpN3UkttzwPJKV8CQ8PvH7nNqLVWhcgpeJc4CeDTaiWfjlMbTRAWaKxL23JKh2IXNzCk8yXqO9OZF9+iLwEKA+fed9AIPmUoBMo9NBoKpjkKprGCh0LieOaYoLcjSrTQ6HMOSTfNmNmRy39MV5f70vulJby+dTNBFuuJBApniob2dp7m3j/PdKBiMzQ6Hvy7RGXf+YGME3fUa0Wn+K6QBzLuJqPuFMT8X88xfX2iIViGHquCcQc/6TNZSriZJj7MbB+Xq+UKVU32DTTF6GjgNz6/EHEPOPNTboKdxlDzDOM1gi0oGCgcrwRzDDuFXoLSW4zjnhL/jrZWKZ8Kxwv0dvfsrfxVhZ6p4zjl9pcv0Pgyr+GHjYgQuC0i5s1Kij33/fj5Y72Bwv66yoPvpCfSP6jprQEFPw04ZTrVRlhyx0JHwc6c8vwHrvEQcg==
+api: eJytU8lu2zAQ/RVjzqykOE7R8tQFRYCiRYvaPRlGMJLGFlOKpLm4NgT9ezFiliZBCgSoDhJFzvLem8cBPO0ThfjBtieQAzTWRDKRl+icVg1GZU15HazhvdB01COv4skRSLD1NTURBNARe6eJj3beJvdZtSDhbF6dvz5fVIvF24tqPn9zsXi3K1KAkR8BnoKzJlDgtHlV8ael0HjluC1IWKamoRC2Sc9ug0H8F5Q9hYA7Pr30ydkZ1mhaa7C1MzqqaAP2ZCJ3azHiS3gxs4csvhAeaHbJ+SCgp9hZruJsYFAOYwcSSnSqnHqUmuNBQCB/IB9ArgdIXoOELkYXZFkOkQyaeKXasahTZwuN8LjragqZLaciIOCAXmGts9p3+VnzLSYdQUJLvX22UKpb26MyTFM8RrT3zwL5isrcwhg3AnhOP+599+ll1hGgzNZOHFTUeYBZWNYqdzwrqqLiUJa4x8kVBnt6MosHQO/8EukYS6cnqiLzHG7GtAZ0CkRGCgLyqDYCOh6mXMMw1Bjop9fjyNv7RP4Ecr2515//RgEdYUt+mu0vOoGEj9nVr1YMgsN1YjBPHM7a54z3TUMu/jN285ffvn9brkBAfXPXe9tyjsffIKa3BBBgJzEmj0x7A2g0u5SvSq7Jzx9y0mx3
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -55,7 +55,7 @@ Leave Group
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"groupJid":"120363404495022854@g.us"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Leave Group
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Grupo abandonado exitosamente","data":{"groupJid":"120363404495022854@g.us"}}}}}}}}
 >
   
 </StatusCodes>

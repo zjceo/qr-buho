@@ -5,7 +5,7 @@ description: "Campaign Details"
 sidebar_label: "Campaign Details"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kcFOwzAQRH+lmrNJAkffECDEAQloOVUVcpJtY8mxXdspVJb/HTlpoVT0ZNme3X0zG+HIW6M9efCIm6rKR0u+cdIGaTQ45kPTkPdIiZ393IneCrnRs3sKQioPhp5CZ1pwbCiAwYrQgaMUVpbNQe1L35nPMso2gcGT25Hz4MuIwSlwdCFYz8syBtJChw/ZpqIeOlMogXOCxSiZzccmYNgJJ0WtJjc/9ZOntRhUAEdLvbnYaKhb0wupkVJi50RbdxHkWUh9xEgrBqnXZmSQQRE4Xt9uX55mV7NjZDmr7Huqvi6qokJisMaHXuhcqUVP/2f8Z3JE2NssDPQVSqtGdjaBx0P+SwgrwdCcDM87AAOXLVYMnfEh62Kshad3p1LKz9uB3B58ufpNNt/SyZ4fHxZI6RtnAsZD
+api: eJx1VEFu2zAQ/IqwpxZgLNmoL7wFSdHmUKBN0lNgBGtxbTGlSIZcpTEEPapv6MeKlRzHaRJBgCRqdjWcmVUPERO2xJQy6JsePLYEGqwBBdaDhojcgIJE951NZEBz6khBrhtqEXQPvItjhWfaUoJBgaFcJxvZBmlwhm1Eu/XFxTkMK+mUY/CZshQvqkouLyuuurqmnEFBHTyTZ4FgjM7WKJDyLguuf00irO+oZlBAj9hGR2Nv5BFiDei5ArYs6xOtv3+wMFTE1NEaQcE2hS6KEHO1WCloKWfcCvprcKgKykwF5aLzRUs+4x09V89gEsV0jm6RQcOiWixP5tVJNS/mla7kFAwjdxn0ASxKc2B0t4lqGy15zqCXlYI8bv3TUsEGrQD1cpiOdzU+J0brRLqWuAkGNGxJBBlt1FBitGW9R+cyN+F32VszCDFKD08p6JIDDQ1zzLoseyaPnm+tGWbrrgkzJ1q9ZHA9QoqrsQkoeMBkce0mlw/1k9cb7JwIZKgN7zbq1ia0aD3Idv9ndJ/eJfINrX+iIXGzfhNGDnvff1yefr8oToonyUQr2fdUPZ9Vs0oyHEPmFseU7UfiDY1ffPkQQqZHLqMbuauJeL/X/wYwWsn10cfFA1CgrYGVgiZkFlzfrzHTz+SGQZbvO0o70DerZ2VHo4zNcm9Ab9BlekXpMEDw4XI/wR+L44lUb7PeL6LfjV66Tp5AwS/aTX+HYTUoaAgNpZHI9OK0rinyUcmrqR1WR9H88vkahuEfOBODag==
 sidebar_class_name: "get api-method"
 info_path: qr-devs/api/tenant/campaigns/qrapi-campaigns
 custom_edit_url: null
@@ -39,8 +39,16 @@ import Translate from "@docusaurus/Translate";
 
 Campaign Details
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"integer"},"description":"Campaign ID"}]}
 >
   
 </ParamsDetails>
@@ -55,7 +63,7 @@ Campaign Details
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"data":{"id":1,"title":"Campaña de prueba","groups":[1,2],"message":"Hola, este es un mensaje de prueba.","schedule_at":"2025-10-01 10:00:00","status":"scheduled","total_recipients":50,"sent":45,"failed":5}}}}}}}}
 >
   
 </StatusCodes>

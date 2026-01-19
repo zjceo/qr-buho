@@ -5,7 +5,7 @@ description: "Send Invite Url"
 sidebar_label: "Send Invite Url"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Uk2P0zAQ/SvVO5umcPQRhBAHBKLdU1UhN542Xhzb9UfZKvJ/R+N0u6Ls5pA4ozfj9zETIp0KpfzR6wvkhN67TC7zUYVgTa+y8a57TN5xLfUDjYpP+RIIEn7/SH1GrbUKRErBu0SJAR9WK/5oSn00gadAYl36nlI6FLt4BoM771Dk9OKrO5tMi4doITBSHryGRPApQyCoPECiO0ZfQmcatEvkNAQSxTPFBLmdUKKFxJBzSLLrpkxOufzL6Lrcl8EvrcL93ZsGWazbEAicVTRqb2dNt/5Z2UEVmyGhafRvDip77UdlHHsk7hmd4ptEvinjnmnUnQBH8PMlrM9PagyWIKcqYNzBN34mcwlf2BYmTzHN094vV8sVqmgGjqqF6dRIr7r9D5Fb1JmechdskyJmHdM1iC2O1xvnKFoKTmMnMHBgcotp2qtED9HWyuVToXiB3O5eHOa/KjCQ0hRber/pAolP80q+2zANhtvCdP5bTzbptic/vq83ENhf13r0mnui+gPR3hIQ8E1iS7bVJljljkUdGTvP5OcvUEIU+g==
+api: eJzNVE1v1DAQ/SvWnM0mu92F1icKQggkBKKtOKxWyImnG7eO7fpj6SrKf0fj9IO2FHHggA+JY4/fvHnznAECXmWM6Y1TexADtM4mtImm0nujW5m0s9VFdJbWYtthL2mW9h5BgGsusE3AAa9l7w3S1ja47D9qBQLmi/rg5cGyXi6PVvVicbhavt7OcgQOCmMbtCd0EHDcthgjS52OzGh7yZJjF05b1u/Zt06meOw9K7gCONjcNxgiiDWs5kf1crk6XCxewWakwSFg9M5GjERmUdf0epjuJJd859mw22Dg/6T2HmOUW9r9YHc6yVY7i5Gh3WmpZGR4rZOLskebKKWSSf61ZLGQm4/jTZ2PakKrWEmK7CwY4NBj6hxBeheJppepAwFVSVbpElpFtKpgh90k6QA5GBDQpeSjqKohoZU2fddqnDW5czMjn7TvtISwkwICHHYyaNmYqQN356c+nMtsEghQ2LtngXKjXC+1BSr0MaOr8CyRT1LbWxrjhgP17uu9w9/9DybloO25K8roRGTgPZ0h2TDEKdV8Vs9qGHlpXS+L/6zs8bd9fsDyzp0Jr1PlTRGRTwoONxZYT9UDMSGcyVsKNhw6sopYwzA0MuJZMONIy1cZwx7EenPfW/oaOXQoFYbim0vcg4C30y16cUo0KNxkovPkRlFfpxOkq09/jN384uYvn09OgUNz88fqnaIzQf4AXp4CgIMrchT/lbUBjLTbPF3NCZPGT9IDrd0=
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/group/group
 custom_edit_url: null
@@ -55,7 +55,7 @@ Send Invite Url
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"groupJid":"120363404495022854@g.us","description":"Access this link to join my WhatsApp group:","numbers":["51904458227"]}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Send Invite Url
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Invitaciones enviadas exitosamente","data":{"groupJid":"120363404495022854@g.us","sent":1}}}}}}}}
 >
   
 </StatusCodes>

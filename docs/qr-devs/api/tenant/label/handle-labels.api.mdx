@@ -5,7 +5,7 @@ description: "Handle Labels"
 sidebar_label: "Handle Labels"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Uk1v2zAM/SvBO2txtqOOGwbssGFFk52CYKBtplYnS4okdw0M/feBcpqiXeuDLROP1PvgjMiniVP+7Psz9IzOu8wuy5FCsKajbLxr7pN3UkvdwCPJKZ8DQ8O399xllFKKQuQUvEucBPBps5FPz6mLJsgUaGynruOUjpNdPYEhnS9R38j1llffqWWboDByHnwPjeBThkKgPECjoWAaK6BmqB1QSBwfOCbo/YwpWmgMOYekm2bO7Mjl36Yv63Ya/NoSXl+8q5DVtg6BwgNFQ61dBF37F1lHmmyGRs+jf3fQ1PZ+JOPEIPWa0Sm+S+QHGfdEoxwUxP/b56S+PtIYLEPPRcG4o6/8TJYSqm1CnmNapn1cb9YbFFX9G6km6WjkN6x+QeOacubH3ARbhahFxXxJYQ8KBgr2cusliYPCIGHpPea5pcS/oi1FyqeJ4xl6f3i2V/6KwsDUc6zR/eEzNL4sy/hhJywEbidh899iikPXHbn5ud1Bob0s9Oh76Yn0F6q+NaDgq8Iaa63NsOTuJroT7DJTnn9MpBHz
+api: eJytVF1v1DAQ/CuneTaXuyJQ8RMfqgQSCMSVp9MJbeK9xsWxfbHT9hTdf0frXFtaKE/1Q+LYs+OdnXVG9LwbOOX3weyhRzTBZ/ZZphSjsw1lG3x1mYKXtdS03JHM8j4yNEJ9yU2GAt9QFx3Llh+6mntovFq+efn6dLk8PVm+TfPrlnKiGOeeJcBRze6TgcYSCtTIOdAgY3CQodBzisEnTkJ6sljIy3BqehuP4NXQNJzSdnCzWzDUs2joOCW6kN2zbHcDZ5pRoTI04xubQ6KOfZbjDGV6Ptki/KHIj+SN49lnCUxQ6Di3QQhiSMIYKbfQqCjaqrBXbYmAQuL+ivsEvR4x9A4abc4x6aoaM3vy+ac1h3k9tGHuCI8PPi+Q2aqQQOGKeku1m/y4i59c2dLgMjQMd+FJoqE2oSPrRal6nNGufzKRL2T9bRqHjYI4+f2+b8+es/UUrN+GotBmIUUpvMjnPk3A5XwxXwhUHOiodJWnjv9h1gMhdx2X+SZX0ZVSqKkO49HHNSja2xyhcPRyo9CK3XqNcawp8Y/eHQ6yvBu430OvN/cGyddBoWUyUoz1iF+8h8aH6WK8OJcsBO4GyeavSyLmTBHvmoZj/i9280dHfvu6OodCffyZdMFITE/XUOWpAYVQqlGaqKyNcOQvhum2TZwyfgPhzo0n
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/label/label
 custom_edit_url: null
@@ -55,7 +55,7 @@ Handle Labels
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"number":"51936811821@s.whatsapp.net","labelId":"1","action":"add"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Handle Labels
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Etiqueta aplicada exitosamente","data":{"number":"51936811821@s.whatsapp.net","labelId":"1","action":"add"}}}}}}}}
 >
   
 </StatusCodes>

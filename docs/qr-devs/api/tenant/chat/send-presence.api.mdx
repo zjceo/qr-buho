@@ -5,7 +5,7 @@ description: "Send Presence"
 sidebar_label: "Send Presence"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1Uk2P0zAQ/SvVO5umcPQRxBGxouVUVWiSTDfZdWzXH8tWkf87GqfbisLmkDijN+P3MTMCnzLH9Nn1Z+gZnbOJbZIjeW/GjtLobPMUnZVa7AaeSE7p7Bkarn3iLqGUUhQCR+9s5CiAT5uNfHqOXRi9TIHGNncdx3jMZvUGhnTeodj2q4fAkW3HUJg4Da6HhncxQcFTGqDRdAOlxl9wTWTbQyFyeOEQofczcjDQGFLyUTfNnNiSTb/GvqzbPLi1IdxfvauQ1bYOgcILhZFas0i69i/CjpRNgkbPk3t3UG57N9FoxSJ1z+gU3iXyjUb7RqMcFCSBH7esvr7S5A1Dz0VhtEdX+Y1JSvgykNgkNizDPq436w2KqgZOVKO0NPF/vP6LxTXmxK+p8abqUIuI+RLDHt1ynb8NqVEcFAbJS+8xzy1F/hlMKVI+ZQ5n6P3h5q/8FYWBqedQs3vms0hZ9vHDTngI3GTh889uikXXNXn4vt1Bob3s9OR66Qn0G6q+NaDgqsaaa63NMGQfMz0Kdpkpzx/dVxPF
+api: eJytU8tu2zAQ/BVjzqzl5MhbW/RSoKjRpCfDKFbkxmIqPkJSqQ1B/16sFCdtmvQUHiQ+doezs8MRme8GLvVDtCfoESaGyqHKlFLqnaHqYmhuSwyyV0zHnmRWT4mhEdtbNhUKfCSfepajMPiWMzTGMbOPlT87O01QsNzTCfricrNRSJkLByMgJvoUiwsHTDIUMpcUQ+EicJebjfwsF5NdEjrQuBqM4VJuhn51DoZ6E/aeS6GDnG4Xho5WHO4dWVrx0dVYyHOovHCd1HNiHOxqe65NwXPtooVGikVuSlQ7aDSmo9qcNWgKBwuFwvmec4HejRhyD42u1lR004yVA4X6w9lp3Q5dXPeE51dfzyGrqxkECveUHbX9ouJj/qLlDQ19hYZlH18FGlobPbkgparnjO7yq0S+kAtnGtNeQfT/9uSzT29jFQUXbuJcm6sCh48dicQi4ULkYr1ZbyRSxPc0myCQ5xf69FcFjwapfKxN6mcN1CLA+NDCHcxyXXoCmdu4V+ik13qHcWyp8PfcT5Ns3w2cT9C7/VNvZDUpdExWdNiN+MknKWVx8rtr4SHh/SB8/nG19GXJeG8Mp/rf2P0fdtx+vbqGQvvw7n20kpPpF9T81YBCnPWY/TPvjegpHIbleSyYMn4DgDF5oQ==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/chat/chat
 custom_edit_url: null
@@ -55,7 +55,7 @@ Send Presence
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"number":"{{remoteJid}}","delay":1200,"presence":"composing"}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Send Presence
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Presencia enviada exitosamente"}}}}}}}
 >
   
 </StatusCodes>

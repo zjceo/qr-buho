@@ -5,7 +5,7 @@ description: "Registrar Plan"
 sidebar_label: "Registrar Plan"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1UkFu2zAQ/IoxZ8Zye+StLXrooahruyfDKNbSxmJKkTRJJTEE/r1YKnWQNOFF1HJnOJzZCZHPI6f82XcX6Amtd5ldli2FYE1L2XjX3CXvpJbangeSXb4EhoY/3nGbUUopCpFT8C5xkoaPq5V8Ok5tNEFYoLEd25ZTgnS/PNnwyaQcKS7WlhwUBs6976ARfMpQCJR7aDQUTBMsuSZWBEcoJI73HBP0fsIYLTT6nEPSTXOOy+PY+6UlvL7xOxm32FYkinoNnDI7cvm36cq7DLva8o9D4Z6ioaOd33/Fzy7c0mgzNDoe/LtE47HzAxknfh4UxPXNcz5fH2kIlqGnomDcra/XmCwl/Nx8Wn9b3FT3kmjhmGbyD8vVcoWiqpED1RwdDfyW6S9kXUPO/JjFcxGmZp+mpzz2oGAknRl/zeSg0Etueo9pOlLiX9GWIuXzyPECvT88+yV/RaFn6jjWEP/wBRpf5mG82YkMabejyPlvMMWr67isf2x3UDg+DfTgO8FEehB59AANKPj6xJpTrU2w5E4jnaR35pT1FwvAEas=
+api: eJzVVE1v2zAM/SvGO6uJO2yH6rYNO+wwLGu7UxAUjMQ06mxJleS2geH/PtBO0i90p12qi2WKpB4fH9Uj8W3HuXwJdgfdwwRf2BfZUoyNM1Rc8PObHLzYstlyS7Iru8jQCOsbNgUK/EBtbFiOPLVytGjIV4vEretaKLh8tUnM0CV1rBCTMwz98Wx2dqZgOZvkotx1iDTBVyVYylVDudp03rjgqXGWLGcoNK515crynTOcoU/rg6nlnOlabJ/q+miVwsiU0bOuB1kKiXMMPotvjw91LZ/nUC46YzjLff+DmT20Q4mJr10uiWyo+MGVkKllXxgKlsqYy1noU/VuGBVOn198vi8xVQIBCi2XbbDQiCELO5HKFhpzim4eG/LziRROUMic7jhl6GWPLjXQ2JYSs57Pb9Ns3W3DrCG8vPEHOV9djJEY1MvAvrAnX66cHd7McDm6HHIo3FFytG4mlRzjJ61sqGsKNCy34c1E3dqGlpzHMAwrBZHM+ePYfXtfk6Pg/CaMVLgisPHr/PPie3UydljyS88mOKezelZjUGOzW/JPanwljGeFHKeo8EMRXQh5auplv9fMEhSdKGiKP+pmpbAVbekl+n5NmX+nZhjEfNtx2kEvV489lb9BYctkOY1C+8M7aHydpv3kUmCIe9MJnFeTLwqbIj4bw7H803f1RP6LnxeXUFjv3902WIlJdC+l0D00oBBGOkbdjbYeDfnrbnpCppyy/gI23/jo
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/admin/plans/qrapi-plans
 custom_edit_url: null
@@ -55,7 +55,7 @@ Registrar Plan
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"name":"Plan Premium","is_free":true,"price":49.99,"description":"Plan con todas las funcionalidades","limit_devices":10,"limit_messages":5000,"limit_contacts":1000}}}}}}
 >
   
 </RequestSchema>
@@ -63,7 +63,7 @@ Registrar Plan
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Success"}}}
+  responses={{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"object","example":{"message":"Plan registrado exitosamente","data":{"id":1,"name":"Plan Premium","is_free":true,"price":49.99,"description":"Plan con todas las funcionalidades","limit_devices":10,"limit_messages":5000,"limit_contacts":1000}}}}}}}}
 >
   
 </StatusCodes>

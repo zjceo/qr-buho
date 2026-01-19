@@ -5,7 +5,7 @@ description: "Set"
 sidebar_label: "Set"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kcFOwzAMhl9l+s9RWzjmDTggkDZO1YTS1aMRaZIl7mCK8u4o7TZg0k6R49/2598JgaJ3NlKETHhsmvL0FHdBe9bOQmI97XYU434yq4sYOYtbFTEERuLB9ZDwLpbYKx4gUX9RNzj3WcdZFSkcKUTINmEKBhIDs4+yrhOTVZbfdZ+rbhpcZRRuJ21myWo9N4HAUQWtOrNscK1f9tiryTAkehrd3UZT17tRaYucs7glOoS7IM9K2wtG3gpou3czg2ZDkHiyTB9BFXUsnBTiUvhQNVWDLGaXRmVLkVUjXW38NyeBT77kmL659mYmFQtmOjvc4uzw7C5jKzCUC8gWKXUq0lswOZfvw0ThBNluf40rUf5zu9eX9QY5/wBlRLjb
+api: eJzdlE1v2zAMhv9KwLOWpF3Wg27tEAzD0LWoU+wQBIVsM7ES6yMS1SY1/N8HyUnaZki7w07zwdYHJb58SLoBh+uAnq5MuQXeQGE0oaY4FNbWshAkjR4svdFxzRcVKhFHtLUIHEy+xIKAAW6EsjXGrSfMK2NWcYha5DWWwMkFZBBcDRwqIuv5YLCz63tJCAwqFCU6n1wHMk4+J9/A4QqFQ9eb3PwY/wQGXzuNnyadhD90tgzy7fgRNXngc1F7ZJALjxejwxR3u1O4HmfZ5bdx9nB/m43vJjBr08PAobdGe0yCzofD+CnRF07anawsFAV6Pw91b28M7J8QVOi9WMTdXx2jXmH0XC6CE6Xp4UaS8UKhTtxKQek+WQKHQq3y57DMP58Nv4z0ZrQ89/n8QikLf0//I77s3fy07DjrH8Ju2TFZjEAUUmViUNb4OLeCKuCwVz7wycqje0zCp81RhA2hFpoeZNn281CZfi3g2NMkmfSydAkweBRORvEJxOF8l/u5CDUBhxKVOXlRyEujhNQQwzpWtHYnhVwLqfcy2hmDSPrupTfH/097MZB6bhJfSTEk+K4JFy658DEH6Hyn7Kw/7A+jw1gBSqQG0kLhoUTeMDy0FOGGBrZOWdhRaXbVMz3gi5VDMGNQxeriU2iaGMW9q9s2Lq8Dui3w6eylKOKs3ZNMBbfCLfC3xKJ5HU6Q25+4LAq09K7t7FUD3N5kE2CQ737SypTxjBNPwNKbAzAwtgPIm26tgVroRej+I92d8fkNcmIK+Q==
 sidebar_class_name: "post api-method"
 info_path: qr-devs/api/tenant/integrations/integrations
 custom_edit_url: null
@@ -39,6 +39,14 @@ import Translate from "@docusaurus/Translate";
 
 Set
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
 <ParamsDetails
   parameters={undefined}
 >
@@ -47,7 +55,7 @@ Set
 
 <RequestSchema
   title={"Body"}
-  body={undefined}
+  body={{"content":{"application/json":{"schema":{"type":"object","example":{"webhook":{"enabled":true,"url":"https://webhook.site","headers":{"autorization":"Bearer TOKEN","Content-Type":"application/json"},"byEvents":false,"base64":false,"events":["MESSAGES_UPSERT"]}}}}}}}
 >
   
 </RequestSchema>
@@ -55,7 +63,7 @@ Set
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Successful response"}}}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","example":{"message":"Webhook configurado exitosamente","data":{"id":"cmkbzujb31054nx4j2sbf6mmp","url":"https://webhook.site","headers":{"Content-Type":"application/json","autorization":"Bearer TOKEN"},"enabled":true,"events":["MESSAGES_UPSERT"]}}}}}}}}
 >
   
 </StatusCodes>

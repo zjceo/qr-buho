@@ -1,1 +1,0 @@
-(globalThis.webpackChunkqr_buho=globalThis.webpackChunkqr_buho||[]).push([[473],{11724(){},22179(){},73936(){}}]);

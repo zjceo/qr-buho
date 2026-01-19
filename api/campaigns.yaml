@@ -3,14 +3,14 @@ info:
   title: "QRAPI - Campaigns"
   version: 1.0.0
 servers:
-  - url: https://qr.buho.la
-    description: Main Server
   - url: https://{tenant_id}.buho.la
     description: Tenant Server
     variables:
       tenant_id:
         default: demo
         description: Tenant Subdomain
+  - url: https://qr.buho.la
+    description: Main Server
 paths:
   "/api/campaigns/manual":
     post:

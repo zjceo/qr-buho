@@ -9,8 +9,6 @@ servers:
       tenant_id:
         default: demo
         description: Tenant Subdomain
-  - url: https://qr.buho.la
-    description: Main Server
 paths:
   "/chat/numbers/check":
     post:

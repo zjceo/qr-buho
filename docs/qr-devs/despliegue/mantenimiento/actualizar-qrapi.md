@@ -1,5 +1,5 @@
 ---
-title: Actualizar QR API
+title: Actualizar
 description: "Guía completa para actualizar el sistema QR API después de la migración del servidor GitLab."
 sidebar_position: 1
 ---
@@ -30,9 +30,11 @@ git remote set-url origin https://git.buho.la/qr-api/app.git
 
 :::tip Verificación
 Puedes verificar que la URL se cambió correctamente con:
+
 ```bash
 git remote -v
 ```
+
 :::
 
 ### Paso 2: Descargar Cambios
@@ -115,10 +117,11 @@ php artisan tenants:migrate
 ### Antes de Actualizar
 
 :::warning Preparación
+
 - **Respalda** tu base de datos antes de ejecutar las migraciones
 - **Verifica** que tienes permisos de escritura en el directorio
 - **Asegúrate** de que el servidor tiene suficiente espacio en disco
-:::
+  :::
 
 ### Durante la Actualización
 
@@ -174,16 +177,15 @@ pnpm install
 
 ## 📋 Resumen de Comandos
 
-| Paso | Comando | Descripción |
-|------|---------|-------------|
-| 1 | `git remote set-url origin https://git.buho.la/qr-api/app.git` | Cambiar URL del repositorio |
-| 2 | `git pull origin main` | Descargar cambios |
-| 3 | `npm i -g pnpm` | Instalar pnpm globalmente |
-| 4 | `pnpm install` | Instalar dependencias |
-| 5 | `pnpm run build` | Compilar proyecto |
-| 6 | `php artisan migrate` | Ejecutar migración principal |
-| 7 | `php artisan tenants:migrate` | Ejecutar migración de tenants |
-
+| Paso | Comando                                                        | Descripción                   |
+| ---- | -------------------------------------------------------------- | ----------------------------- |
+| 1    | `git remote set-url origin https://git.buho.la/qr-api/app.git` | Cambiar URL del repositorio   |
+| 2    | `git pull origin main`                                         | Descargar cambios             |
+| 3    | `npm i -g pnpm`                                                | Instalar pnpm globalmente     |
+| 4    | `pnpm install`                                                 | Instalar dependencias         |
+| 5    | `pnpm run build`                                               | Compilar proyecto             |
+| 6    | `php artisan migrate`                                          | Ejecutar migración principal  |
+| 7    | `php artisan tenants:migrate`                                  | Ejecutar migración de tenants |
 
 ---
 

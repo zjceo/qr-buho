@@ -3,7 +3,7 @@ info:
   title: "Integrations"
   version: 1.0.0
 servers:
-  - url: https://{tenant_id}.buho.la
+  - url: https://{tenant_id}.qr.buho.la
     description: Tenant Server
     variables:
       tenant_id:

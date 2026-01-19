@@ -22,8 +22,8 @@ paths:
               type: object
               example:
                 {
-                  "email": "admin@qr.buho.la",
-                  "password": "bh0yJj2C"
+                  "email": "admin@tudominio.com",
+                  "password": "contraseña"
                 }
       responses:
         '200':
@@ -34,10 +34,10 @@ paths:
                 type: object
                 example:
                   {
-                    "api_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
+                    "api_token": "fdsf6s87dfsdsdfsd7878...",
                     "user": {
                       "id": 1,
-                      "email": "admin@qr.buho.la",
+                      "email": "admin@tudominio.com",
                       "name": "Admin"
                     }
                   }
@@ -51,7 +51,7 @@ paths:
               type: object
               example:
                 {
-                  "api_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9..."
+                  "api_token": "sakldjlsajdakls4534sf4ww..."
                 }
       responses:
         '200':

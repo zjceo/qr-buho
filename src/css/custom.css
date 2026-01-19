@@ -1,30 +1,452 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+* {
+  scrollbar-color: var(--ifm-color-emphasis-0) transparent;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+*:hover {
+  scrollbar-color: var(--ifm-toc-border-color) transparent;
+}
+
+:root {
+  --ifm-color-primary: #00187a;
+  --ifm-color-primary-dark: #00166e;
+  --ifm-color-primary-darker: #001468;
+  --ifm-color-primary-darkest: #001155;
+  --ifm-color-primary-light: #001a86;
+  --ifm-color-primary-lighter: #001c8c;
+  --ifm-color-primary-lightest: #001f9f;
+  --ifm-color-content: #000c34;
+  --ifm-menu-color-background-active: #eff0f4;
+  --ifm-card-background-color: #f6f7f9;
+  --ifm-navbar-shadow: none;
+  --ifm-code-font-size: 100%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Manrope';
+  --ifm-color-danger-contrast-background: #ffeeee;
+  --ifm-color-danger-contrast-foreground: #ff0066;
+  --ifm-color-info-contrast-background: #e6f0ff;
+  --ifm-color-info-contrast-foreground: #0077ff;
+  --ifm-color-success-contrast-background: #eaf9f1;
+  --ifm-color-success-contrast-foreground: #00c666;
+  /* --ifm-heading-color: #020f3c;
+  --ifm-color-gray-900: #031863;
+  --ifm-hover-overlay: #f6f8fe;
+  --ifm-color-emphasis-700: #031863; */
+  --ifm-toc-border-color: #e2e5ee;
+  --ifm-menu-link-sublist-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24'><path fill='rgba(75,88,122,1)' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'></path></svg>");
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary: #648dff;
+  --ifm-background-color: #0c121e;
+  --ifm-navbar-background-color: #0c121e;
+  --ifm-code-background: #181a25;
+  --ifm-toc-border-color: #22222d;
+  --ifm-menu-color-background-active: #eff0f40f;
+  --ifm-card-background-color: #eff0f40f;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+.navbar__logo {
+  background: #fff;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.theme-doc-version-banner {
+  display: none;
+}
+
+.theme-doc-sidebar-container{
+  border-right: none !important;
+}
+
+.theme-doc-markdown.markdown {
+  padding: 30px;
+}
+.markdown p img{
+  margin: 3rem auto;
+  display: block;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-toc-border-color);
+  padding: 5px;
+}
+.menu{
+  font-weight: 400;
+}
+.menu__list-item-collapsible,
+.menu__link, .menu__caret {
+  border-radius: 6px;
+}
+.menu__caret {
+  transform: scale(.6);
+}
+.menu__link {
+  font-size: .85rem;
+  color: var(--ifm-color-content);
+}
+
+.menu__link:hover, .menu__caret:hover,
+.menu__list-item-collapsible:hover,
+.menu__list-item-collapsible--active,
+.menu__link--active:not(.menu__link--sublist),
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: var(--ifm-menu-color-background-active);
+}
+
+span.sidebar-icon svg {
+  background: var(--ifm-menu-color-background-active);
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+}
+.menu__list-item-collapsible:hover span.sidebar-icon svg,
+.menu__list-item-collapsible:hover .menu__caret {
+  background: var(--ifm-card-background-color);
+}
+.table-of-contents__left-border {
+  border-left: none;
+}
+
+.menu__list .menu__list {
+  border-left: 1px solid var(--ifm-toc-border-color);
+  padding-left: 0;
+  margin-left: 24px;
+}
+
+.api-method > .menu__link::before,
+.schema > .menu__link::before {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.get > .menu__link::before {
+  content: "GET";
+  background-color: var(--ifm-color-info-contrast-background);
+  color: var(--ifm-color-info-contrast-foreground);
+  border-color: var(--ifm-color-info-dark);
+}
+
+.post > .menu__link::before {
+  content: "POST";
+  background-color: var(--ifm-color-success-contrast-background);
+  color: var(--ifm-color-success-contrast-foreground);
+  border-color: var(--ifm-color-success-dark);
+}
+
+.delete > .menu__link::before {
+  content: "DEL";
+  background-color: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger-contrast-foreground);
+  border-color: var(--ifm-color-danger-dark);
+}
+
+.put > .menu__link::before {
+  content: "PUT";
+  background-color: var(--ifm-color-warning-contrast-background);
+  color: var(--ifm-color-warning-contrast-foreground);
+  border-color: var(--ifm-color-warning-dark);
+}
+
+.patch > .menu__link::before {
+  content: "PATCH";
+  background-color: var(--ifm-color-success-contrast-background);
+  color: var(--ifm-color-success-contrast-foreground);
+  border-color: var(--ifm-color-success-dark);
+}
+
+.head > .menu__link::before {
+  content: "HEAD";
+  background-color: var(--ifm-color-secondary-contrast-background);
+  color: var(--ifm-color-secondary-contrast-foreground);
+  border-color: var(--ifm-color-secondary-dark);
+}
+
+.event > .menu__link::before {
+  content: "EVENT";
+  background-color: var(--ifm-color-secondary-contrast-background);
+  color: var(--ifm-color-secondary-contrast-foreground);
+  border-color: var(--ifm-color-secondary-dark);
+}
+
+.schema > .menu__link::before {
+  content: "SCHEMA";
+  background-color: var(--ifm-color-secondary-contrast-background);
+  color: var(--ifm-color-secondary-contrast-foreground);
+  border-color: var(--ifm-color-secondary-dark);
+}
+.tabs.openapi-tabs__code-list-container li.tabs__item {
+  display: none;
+}
+li.tabs__item.openapi-tabs__code-item.openapi-tabs__code-item--javascript,
+li.tabs__item.openapi-tabs__code-item.openapi-tabs__code-item--nodejs,
+li.tabs__item.openapi-tabs__code-item.openapi-tabs__code-item--php,
+li.tabs__item.openapi-tabs__code-item.openapi-tabs__code-item--python,
+li.tabs__item.openapi-tabs__code-item.openapi-tabs__code-item--variant {
+  display: inline-flex;
+}
+.openapi-tabs__code-item--javascript.active,
+.openapi-tabs__code-item--nodejs.active,
+.openapi-tabs__code-item--php.active,
+.openapi-tabs__code-item--python.active {
+  box-shadow: none !important;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.openapi-tabs__code-container:not(.openapi-tabs__code-container-inner),
+.openapi-tabs__code-container:hover,
+.openapi-explorer__request-form,
+.openapi-explorer__request-form:hover,
+.openapi-explorer__response-container,
+.openapi-explorer__response-container:hover {
+  box-shadow: unset !important;
+}
+
+.navbar__item.dropdown {
+  border: 1px solid var(--ifm-toc-border-color);
+  margin: 0 15px;
+  border-radius: 20px;
+  padding: 4px 20px;
+}
+.navbar__item.dropdown ul.dropdown__menu li:first-child {
+  display: none;
+}
+
+.clean-btn.toggleButton_gllP {
+  border: 1px solid var(--ifm-toc-border-color);
+}
+
+.navbar__search-input{
+  height: 2.25rem;
+}
+.alert{
+  border-left-width: 0;
+  box-shadow: unset;
+}
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.25rem;
+}
+
+.menu__link--active {
+  font-weight: bold;
+}
+
+.openapi-left-panel__container {
+  border-right: none !important;
+}
+
+.docs-card {
+  background-color: var(--ifm-menu-color-background-active) !important;
+  padding: 10px 20px;
+  border: 1px solid var(--ifm-toc-border-color);
+}
+.docs-card:hover {
+  background: var(--ifm-toc-border-color) !important;
+}
+
+header.Card-header {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+header.Card-header:before {
+  content: '📖';
+  display: block;
+  font-size: 2rem;
+}
+
+.icon-manual{
+  color:red;
+}
+
+
+/* ####################################################################### */
+/* 
+pre {
+  background-color: #010f3c;
+}
+
+html[data-theme='dark'] .theme-doc-markdown.markdown {
+  background: #142845;
+}
+
+@media (max-width: 996px){
+  .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+    right: unset !important;
+  }
+}
+
+@media (min-width: 400px){
+  .aa-Autocomplete {
+    width: 320px;
+  }
+}
+
+.aa-Form:focus-within {
+  border-color: rgb(36 70 232) !important;
+  box-shadow: 0 0 0px 3px rgb(36 70 232 / 15%) !important;
+}
+
+.aa-Label svg, .aa-LoadingIndicator svg {
+  color: rgb(36 70 232);
+}
+
+button.aa-DetachedSearchButton {
+  background-color: #f6f8fe;
+  border: 1px solid #eaeef7;
+  border-radius: 6px;
+}
+.aa-DetachedSearchButtonIcon{
+  color: inherit !important;
+}
+.aa-DetachedSearchButton:focus {
+  border-color: rgba(36, 70, 232,1) !important;
+  box-shadow: rgb(36 70 232 / 15%) 0 0 0 3px, inset rgb(36 70 232 / 15%) 0 0 0 2px !important;
+}
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  box-shadow: unset !important;
+}
+
+.theme-doc-markdown.markdown {
+  background: #f6f8fe;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module{
+  border-right: none !important;
+}
+
+@media (min-width: 997px){
+  aside.theme-doc-sidebar-container.docSidebarContainer_b6E3 {
+    border-right: none !important;
+  }
+}
+
+.hero__title{
+  display: none;
+}
+
+.openapi__method-endpoint {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.openapi-explorer__code-block-lines.openapi-explorer__code-block-lines-numbering {
+  background-color: rgba(256, 256, 256, 0.1);  
+}
+
+.api-method > .menu__link,
+.schema > .menu__link {
+  align-items: center;
+  justify-content: start;
+}
+
+.card img {
+  max-width: 100px;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 8px 0;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #555;
+} */
+
+
+[data-theme='light'] .DocSearch {
+  /* --docsearch-primary-color: var(--ifm-color-primary); */
+  /* --docsearch-text-color: var(--ifm-font-color-base); */
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-color-secondary-lighter);
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-color-secondary);
+  --docsearch-searchbox-focus-background: var(--ifm-color-white);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-white);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-color-white);
+}
+
+[data-theme='dark'] .DocSearch {
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-background-color);
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-background-color);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
+}
+
+/* ========================================
+   ENLACE API EN NAVBAR - SOLO PARA PRO7
+   ======================================== */
+
+/* Estilos base del enlace API */
+.navbar__api-link {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 4px 20px;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 20px;
+  background-color: var(--ifm-color-primary);
+  color: white !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar__api-link:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: white !important;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 996px) {
+  .navbar__api-link {
+    margin: 0 8px;
+    padding: 4px 16px;
+    font-size: 0.9rem;
+  }
 }
